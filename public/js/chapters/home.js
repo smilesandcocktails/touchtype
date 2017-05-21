@@ -1,6 +1,6 @@
 var chapterHome = {
   one: "My Name is Cara. What is yours? Press on the Space Bar before letting me know your name.",
-  two: "Lovely to meet you. Press Enter to continue."
+  two: "Lovely to meet you. Press Enter to continue"
 }
 
 var user = 'Friend'
@@ -59,7 +59,7 @@ $(document).ready(function() {
     }
     else if (e.which == 13) {
       console.log("End speech session")
-      url = $('#chaptOneLink').attr('href')
+      url = $('#contentsLink').attr('href')
       window.location.href = "http://localhost:8000"+url
     }
   })

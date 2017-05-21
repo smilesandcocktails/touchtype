@@ -4,6 +4,11 @@ function chapterHome (req, res) {
   res.render('chapters/chapterHome')
 }
 
+function contents (req, res) {
+  console.log('CHAPTERCONTROLLER - CONTENTS FUNCTION - STARTED')
+  res.render('chapters/contents')
+}
+
 function chapterOne (req, res) {
   console.log('CHAPTERCONTROLLER - CHAPTERONE FUNCTION - STARTED')
   res.render('chapters/chapterOne')
@@ -11,5 +16,6 @@ function chapterOne (req, res) {
 
 module.exports = {
   chapterHome,
+  contents,
   chapterOne
 }

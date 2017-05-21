@@ -5,6 +5,9 @@ var chapterController = require('../controllers/chapterController')
 router.route('/')
 .get(chapterController.chapterHome)
 
+router.route('/contents')
+.get(chapterController.contents)
+
 router.route('/one')
 .get(chapterController.chapterOne)
 
