@@ -11,6 +11,18 @@ router.route('/contents')
 router.route('/one')
 .get(chapterController.chapterOne)
 
+router.route('/two')
+.get(chapterController.chapterTwo)
+
+router.route('/three')
+.get(chapterController.chapterThree)
+
+router.route('/four')
+.get(chapterController.chapterFour)
+
+router.route('/five')
+.get(chapterController.chapterFive)
+
 
 
 module.exports = router

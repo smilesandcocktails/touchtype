@@ -1,6 +1,5 @@
 var intro = {
-  one: "Welcome to this website! Press on Space Bar",
-  two: "My Name is Cara. What is yours?",
+  one: "A big welcome to my website! You have entered into",
   none: "Sorry your browser does not have voice support features"
 }
 
