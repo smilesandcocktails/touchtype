@@ -59,7 +59,7 @@ $(document).ready(function() {
     }
     else if (e.which == 39) {
       console.log("End speech session")
-      url = $('#contentsLink').attr('href')
+      url = $('.contentsLink').attr('href')
       window.location.href = "http://localhost:8000"+url
     }
   })

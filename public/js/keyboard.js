@@ -1,5 +1,5 @@
 var keyboardIntro = {
-  one: "Enter key or click on the ",
+  one: "Enter any key on your keyboard for an audio guide. Or use your mouse to click anywhere on the site to go back to your contents page.",
   // one: "You are now at your keyboard audio page. Press on any key on your keyboard and it will tell you which key you have entered."
 }
 
@@ -305,8 +305,9 @@ $(document).ready(function() {
       }
     }
 
-    if (e.shiftKey === true && e.keyCode === 32) {
-      window.location.href = "http://localhost:8000/chapter/one"
-    }
+    $(window).on('click', function() {
+      url = $('.contentsLink').attr('href')
+      window.location.href = "http://localhost:8000"+url
+    })
 
 })
