@@ -1,6 +1,6 @@
 var chapterHome = {
   one: "My Name is Cara. What is yours? Press on the Space Bar before letting me know your name.",
-  two: "Lovely to meet you. Press Enter to continue"
+  two: "Lovely to meet you. Press on the right arrow key to continue "
 }
 
 var user = 'Friend'
@@ -12,7 +12,7 @@ $(document).ready(function() {
   console.log(msg.textContent)
   responsiveVoice.speak(msg.textContent, "US English Female")
 
-  $(document).keypress(function(e) {
+  $(document).keydown(function(e) {
     if (e.which == 32) {
       var recognizing
       var transcription = document.getElementById('speech')
@@ -57,7 +57,7 @@ $(document).ready(function() {
           console.error(event.error);
       }
     }
-    else if (e.which == 13) {
+    else if (e.which == 39) {
       console.log("End speech session")
       url = $('#contentsLink').attr('href')
       window.location.href = "http://localhost:8000"+url

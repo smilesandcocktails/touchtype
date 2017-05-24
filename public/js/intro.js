@@ -1,5 +1,5 @@
 var intro = {
-  one: "A big welcome to my website! You have entered into",
+  one: "Welcome to the TouchType website! Press the right arrow key at the bottom right of your keyboard to continue.",
   none: "Sorry your browser does not have voice support features"
 }
 
@@ -10,8 +10,8 @@ $(document).ready(function() {
     console.log(msg)
     responsiveVoice.speak(msg.textContent, "US English Female")
 
-    $(document).keypress(function(e) {
-      if(e.keyCode || e.which == 32) {
+    $(document).keydown(function(e) {
+      if(e.which == 39) {
         url = $('#chapterHomeLink').attr('href')
         console.log(url)
         window.location.href = "http://localhost:8000"+url

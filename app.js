@@ -8,6 +8,9 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 app.use(express.static(path.join(__dirname, 'public')))
 
+var keyboardRouter = require('./routes/keyboardRouter')
+app.use('/keyboard', keyboardRouter)
+
 var chapterRouter = require('./routes/chapterRouter')
 app.use('/chapter', chapterRouter)
 
