@@ -1,5 +1,6 @@
 var keyboardIntro = {
-  one: "You are now at your keyboard audio page. Press on any key on your keyboard and it will tell you which key you have entered."
+  one: "Enter key or click on the ",
+  // one: "You are now at your keyboard audio page. Press on any key on your keyboard and it will tell you which key you have entered."
 }
 
 var keyCodes = {
@@ -10,7 +11,7 @@ var keyCodes = {
   13 : "enter",
   16 : "shift",
   17 : "control",
-  18 : "alt or option",
+  18 : "option",
   19 : "break",
   20 : "caps lock",
   27 : "escape",
@@ -29,7 +30,7 @@ var keyCodes = {
   44 : "Print Screen",
   45 : "insert",
   46 : "delete",
-  48 : "zero",
+  48 : "0",
   49 : "1",
   50 : "2",
   51 : "3",
@@ -137,19 +138,133 @@ var keyCodes = {
   181 : "mute/unmute (firefox)",
   182 : "decrease volume level (firefox)",
   183 : "increase volume level (firefox)",
-  186 : "semi colon",
-  187 : "equal sign ",
-  188 : "comma",
-  189 : "dash ",
-  190 : "period ",
-  191 : "forward slash",
+  186 : ";",
+  187 : "=",
+  188 : ",",
+  189 : "-",
+  190 : ".",
+  191 : "/",
   192 : "grave accent",
   193 : "?, / or °",
   194 : "numpad period (chrome)",
-  219 : "open square bracket ",
-  220 : "back slash ",
-  221 : "close square bracket",
-  222 : "single quote",
+  219 : "[",
+  220 : "back slash",
+  221 : "]",
+  222 : "'",
+  223 : "`",
+  224 : "left or right ⌘ key (firefox)",
+  225 : "altgr",
+  226 : "< /git >",
+  230 : "GNOME Compose Key",
+  231 : "Rç",
+  233 : "XF86Forward",
+  234 : "XF86Back",
+  255 : "toggle touchpad"
+}
+
+var shiftKeyCodes = {
+  3 : "break",
+  8 : "delete",
+  9 : "tab",
+  12 : "clear",
+  13 : "enter",
+  16 : "shift",
+  17 : "control",
+  18 : "alt",
+  19 : "break",
+  20 : "caps lock",
+  27 : "escape",
+  32 : "spacebar",
+  33 : "page up",
+  34 : "page down",
+  35 : "end",
+  36 : "home ",
+  37 : "left arrow ",
+  38 : "up arrow ",
+  39 : "right arrow",
+  40 : "down arrow ",
+  41 : "select",
+  42 : "print",
+  43 : "execute",
+  44 : "Print Screen",
+  45 : "insert",
+  46 : "delete",
+  48 : ")",
+  49 : "!",
+  50 : "@",
+  51 : "#",
+  52 : "$",
+  53 : "%",
+  54 : "^",
+  55 : "&",
+  56 : "*",
+  57 : "(",
+  58 : ")",
+  59 : "colon",
+  60 : "<",
+  61 : "equals (firefox)",
+  63 : "ß",
+  64 : "@ (firefox)",
+  65 : "Capital A",
+  66 : "Capital B",
+  67 : "Capital C",
+  68 : "Capital D",
+  69 : "Capital E",
+  70 : "Capital F",
+  71 : "Capital G",
+  72 : "Capital H",
+  73 : "Capital I",
+  74 : "Capital J",
+  75 : "Capital K",
+  76 : "Capital L",
+  77 : "Capital M",
+  78 : "Capital N",
+  79 : "Capital O",
+  80 : "Capital P",
+  81 : "Capital Q",
+  82 : "Capital R",
+  83 : "Capital S",
+  84 : "Capital T",
+  85 : "Capital U",
+  86 : "Capital V",
+  87 : "Capital W",
+  88 : "Capital X",
+  89 : "Capital Y",
+  90 : "Capital Z",
+  160 : "^",
+  161: '!',
+  163 : "#",
+  164: '$',
+  165: 'ù',
+  166 : "page backward",
+  167 : "page forward",
+  169 : "closing paren (AZERTY)",
+  170: '*',
+  171 : "~ + * key",
+  173 : "minus (firefox), mute/unmute",
+  174 : "decrease volume level",
+  175 : "increase volume level",
+  176 : "next",
+  177 : "previous",
+  178 : "stop",
+  179 : "play/pause",
+  180 : "e-mail",
+  181 : "mute/unmute (firefox)",
+  182 : "decrease volume level (firefox)",
+  183 : "increase volume level (firefox)",
+  186 : ":",
+  187 : "+",
+  188 : "<",
+  189 : "-",
+  190 : ">",
+  191 : "?",
+  192 : "curly wurly",
+  193 : "?, / or °",
+  194 : "numpad period (chrome)",
+  219 : "{",
+  220 : "pipe",
+  221 : "}",
+  222 : "Double Quote",
   223 : "`",
   224 : "left or right ⌘ key (firefox)",
   225 : "altgr",
@@ -167,18 +282,31 @@ $(document).ready(function() {
     msg.textContent = keyboardIntro.one
     console.log(msg)
     responsiveVoice.speak(msg.textContent, "US English Female")
-
   }
   var body = document.querySelector('body');
 
-  body.onkeydown = function (e) {
-    console.log(e.key + " is the key that was keyed down")
-    console.log(e.shiftKey + " is the shiftkey function")
-    // console.log(e.metaKey + " IS E.METAKEY")
-    if ( !e.metaKey ) {
-      e.preventDefault();
-    }
+    body.onkeydown = function (e) {
+      console.log(e.key + " is the key that was keyed down")
+      console.log(e.keyCode + " is the code")
+
+      // console.log(e.metaKey + " IS E.METAKEY")
+      if ( !e.metaKey ) {
+        e.preventDefault();
+      }
+
+      if (e.shiftKey) {
+        document.querySelector('.keycode-display').textContent = shiftKeyCodes[e.keyCode] + " and " + e.keyCode
+        responsiveVoice.speak(shiftKeyCodes[e.keyCode], "US English Female")
+        array.push(shiftKeyCodes[e.keyCode])
+      } else {
       document.querySelector('.keycode-display').textContent = keyCodes[e.keyCode] + " and " + e.keyCode
       responsiveVoice.speak(keyCodes[e.keyCode], "US English Female")
-  }
+      array.push(keyCodes[e.keyCode])
+      }
+    }
+
+    if (e.shiftKey === true && e.keyCode === 32) {
+      window.location.href = "http://localhost:8000/chapter/one"
+    }
+
 })
