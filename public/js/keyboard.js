@@ -1,3 +1,7 @@
+var keyboardIntro = {
+  one: "You are now at your keyboard audio page. Press on any key on your keyboard and it will tell you which key you have entered."
+}
+
 var keyCodes = {
   3 : "break",
   8 : "delete",
@@ -6,7 +10,7 @@ var keyCodes = {
   13 : "enter",
   16 : "shift",
   17 : "control",
-  18 : "alt",
+  18 : "alt or option",
   19 : "break",
   20 : "caps lock",
   27 : "escape",
@@ -155,17 +159,26 @@ var keyCodes = {
   233 : "XF86Forward",
   234 : "XF86Back",
   255 : "toggle touchpad"
-};
+}
 
-var body = document.querySelector('body');
+$(document).ready(function() {
+  var msg = document.querySelector('.text-display')
+  if(responsiveVoice.voiceSupport()) {
+    msg.textContent = keyboardIntro.one
+    console.log(msg)
+    responsiveVoice.speak(msg.textContent, "US English Female")
 
-body.onkeydown = function (e) {
-  console.log(e.key + " is the key that was keyed down")
-  console.log(e.shiftKey + " is the shiftkey function")
-  // console.log(e.metaKey + " IS E.METAKEY")
-  if ( !e.metaKey ) {
-    e.preventDefault();
   }
-    document.querySelector('.keycode-display').textContent = keyCodes[e.keyCode] + " and " + e.keyCode
-    responsiveVoice.speak(keyCodes[e.keyCode], "US English Female")
-};
+  var body = document.querySelector('body');
+
+  body.onkeydown = function (e) {
+    console.log(e.key + " is the key that was keyed down")
+    console.log(e.shiftKey + " is the shiftkey function")
+    // console.log(e.metaKey + " IS E.METAKEY")
+    if ( !e.metaKey ) {
+      e.preventDefault();
+    }
+      document.querySelector('.keycode-display').textContent = keyCodes[e.keyCode] + " and " + e.keyCode
+      responsiveVoice.speak(keyCodes[e.keyCode], "US English Female")
+  }
+})
