@@ -3,12 +3,12 @@ function intro(req, res) {
   res.render('intro')
 }
 
-function goTochapterOne (req, res) {
+function chapterHome (req, res) {
   console.log('HOMECONTROLLER - GOTOCHAPTERONE FUNCTION - STARTED')
   res.redirect('/chapter')
 }
 
 module.exports = {
   intro,
-  goTochapterOne,
+  chapterHome,
 }

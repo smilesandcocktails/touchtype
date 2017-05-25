@@ -2,8 +2,6 @@ var express = require('express')
 var router = express.Router()
 var chapterController = require('../controllers/chapterController')
 
-router.route('/home')
-.get(chapterController.chapterHome)
 
 router.route('/contents')
 .get(chapterController.contents)

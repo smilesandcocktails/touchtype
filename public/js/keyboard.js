@@ -297,17 +297,17 @@ $(document).ready(function() {
       if (e.shiftKey) {
         document.querySelector('.keycode-display').textContent = shiftKeyCodes[e.keyCode] + " and " + e.keyCode
         responsiveVoice.speak(shiftKeyCodes[e.keyCode], "US English Female")
-        array.push(shiftKeyCodes[e.keyCode])
+      
       } else {
       document.querySelector('.keycode-display').textContent = keyCodes[e.keyCode] + " and " + e.keyCode
       responsiveVoice.speak(keyCodes[e.keyCode], "US English Female")
-      array.push(keyCodes[e.keyCode])
+
       }
     }
 
     $(window).on('click', function() {
       url = $('.contentsLink').attr('href')
-      window.location.href = "http://localhost:8000"+url
+      window.location.href = "http://localhost:8000" + url
     })
 
 })

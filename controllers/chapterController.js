@@ -1,8 +1,3 @@
-function chapterHome (req, res) {
-  console.log('CHAPTERCONTROLLER - CHAPTERHOME FUNCTION - STARTED')
-
-  res.render('chapters/chapterHome')
-}
 
 function contents (req, res) {
   console.log('CHAPTERCONTROLLER - CONTENTS FUNCTION - STARTED')
@@ -37,7 +32,6 @@ function chapterFive (req, res) {
 
 
 module.exports = {
-  chapterHome,
   contents,
   chapterOne,
   chapterTwo,
