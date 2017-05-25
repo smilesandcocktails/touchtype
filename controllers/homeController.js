@@ -1,6 +1,6 @@
-function home (req, res) {
+function intro(req, res) {
   console.log('HOMECONTROLLER - HOME FUNCTION - STARTED')
-  res.render('homepage')
+  res.render('intro')
 }
 
 function goTochapterOne (req, res) {
@@ -9,6 +9,6 @@ function goTochapterOne (req, res) {
 }
 
 module.exports = {
-  home,
+  intro,
   goTochapterOne,
 }

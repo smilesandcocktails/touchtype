@@ -4,7 +4,7 @@ var homeController = require('../controllers/homeController')
 
 
 router.route('/')
-.get(homeController.home)
+.get(homeController.intro)
 .post(homeController.goTochapterOne)
 
 

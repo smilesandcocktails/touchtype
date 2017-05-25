@@ -4,7 +4,7 @@ var chapterHome = {
 }
 
 var user = 'Friend'
-var msg = document.getElementById('chapterHome')
+var msg = document.querySelector('#cHome')
 
 $(document).ready(function() {
 
@@ -15,8 +15,8 @@ $(document).ready(function() {
   $(document).keydown(function(e) {
     if (e.which == 32) {
       var recognizing
-      var transcription = document.getElementById('speech')
-      var interim_span = document.getElementById('interim')
+      var transcription = document.querySelector('#speech')
+      var interim_span = document.querySelector('#interim')
       interim_span.style.opacity = '0.5'
 
       var speech = new webkitSpeechRecognition() || speechRecognition()

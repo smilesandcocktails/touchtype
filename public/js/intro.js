@@ -11,43 +11,13 @@ $(document).ready(function() {
     responsiveVoice.speak(msg.textContent, "US English Female")
 
     $(document).keydown(function(e) {
-      if(e.which == 39) {
+      if(e.which === 39) {
         url = $('#chapterHomeLink').attr('href')
         console.log(url)
         window.location.href = "http://localhost:8000"+url
-        // e.preventDefault()
-
-    //     $.ajax({
-    //   url: '/chapters',
-    //   type: 'GET',
-    //   data: {},
-    //   success: () => {
-    //
-    //   }
-    // })
       }
     })
-
   } else {
     msg.textContent = intro.none
   }
 })
-
-
-// var homeSpaceBar = document.getElementById('homeSpaceBar')
-// homeSpaceBar.addEventListener('keypress', function (e) {
-//   if(e.keyCode == 32) {
-//     var audio = new Audio('../audio/keypress.mp3')
-//     audio.play()
-//     res.render('chapters/chapterHome')
-//   }
-// })
-
-
-// document.addEventListener('DOMContentLoaded', function(e) {
-//
-// })
-
-// if(responsiveVoice.voiceSupport()) {
-//   responsiveVoice.speak("hello world", "US English Female");
-// }
