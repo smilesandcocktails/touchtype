@@ -1,8 +1,7 @@
-{
+[{
 	"intro": {
 		"title": "Welcome to the TouchType website",
-		"one": "Press on the right arrow key at the bottom right of your keyboard to continue.",
-		"none": "Sorry your browser does not have voice support features."
-	},
-  
-}
+		"one": "Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.",
+		"none": "Sorry your browser does not have voice support features"
+	}
+}]

@@ -1,14 +1,40 @@
+const msg = require('../msg.json')
+
 function intro(req, res) {
-  console.log('HOMECONTROLLER - HOME FUNCTION - STARTED')
-  res.render('intro')
+  console.log('HOMECONTROLLER - intro FUNCTION - STARTED')
+  res.render('intro', {json: msg})
 }
 
-function chapterHome (req, res) {
-  console.log('HOMECONTROLLER - GOTOCHAPTERONE FUNCTION - STARTED')
-  res.redirect('/chapter')
+function contents (req, res) {
+  console.log('HOMECONTROLLER - contents FUNCTION - STARTED')
+  res.render('contents')
+}
+
+function keyboard (req, res) {
+  console.log('HOMECONTROLLER - keyboard FUNCTION - STARTED')
+  res.render('keyboard')
+}
+
+function chaptOne (req, res) {
+  console.log('HOMECONTROLLER - chaptOne FUNCTION - STARTED')
+  res.render('chapt/one')
+}
+
+function chaptTwo (req, res) {
+  console.log('HOMECONTROLLER - chaptTwo FUNCTION - STARTED')
+  res.render('chapt/two')
+}
+
+function chaptThree (req, res) {
+  console.log('HOMECONTROLLER - chaptThree FUNCTION - STARTED')
+  res.render('chapt/three')
 }
 
 module.exports = {
   intro,
-  chapterHome,
+  contents,
+  keyboard,
+  chaptOne,
+  chaptTwo,
+  chaptThree
 }
