@@ -299,7 +299,7 @@ var chaptOne = {
   six: "Awesome! That is the 'D' letter. Now rest your fourth finger beside your middle finger, and press on it. ",
   seven: "Great! You have found the 'S' key. Now place your pinky finger on the key beside your fourth finger and press on it. ",
   eight: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
-  nine: "Perfect! Your left hand is now in the correct position for touch typing! Chapter 2 will teach you the correct position for your right hand. Press on the right arrow key to go to the next Chapter.",
+  nine: "Perfect! Your left hand is now in the correct position for the left home row keys for touch typing! Chapter 2 will teach you the correct position for your right hand. Press on the right arrow key to go to the next Chapter.",
   ten: "Or press on the shift key above your right arrow key to go back to the contents page. "
 }
 
@@ -311,6 +311,10 @@ var chaptTwo = {
   three: "Great! You have pressed on the 'K' key. Now put your fourth finger on the key beside 'K' and press on it.",
   four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
   five: "Awesome! Now that is the semi colon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
-  six: "Perfect! Your right hand is now in the correct position for touch typing! The next will be a revision of Chapters 1 and 2. Press on the right arrow key to go to Chapter 3.",
+  six: "Perfect! Your right hand is now in the correct position for the right home row keys! The next chapter will teach you how to navigate the line of keys above your home row keys. Press on the right arrow key to go to Chapter 3.",
   seven: "Or press on the shift key above your right arrow key to go back to the contents page. "
+}
+
+var chaptThree = {
+  title: "Chapter 3",
 }
