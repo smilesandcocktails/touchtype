@@ -295,7 +295,10 @@ var chaptOne = {
   two: "Feel around your keyboard, and see if you can find 2 keys with protruding bumps on them. ",
   three: "Now try searching for the keyboard bumps. ",
   four: "When you have found your keyboard bumps, put your left index finger on the key with the bump on the left and press on it. ",
-  five: "Great Job! You have found the F letter on your keyboard! Now rest your middle finger on the key beside the F key, rest your fourth finger beside your middle finger, and your pinky at the key beside your fourth finger. Rest your left thumb on the space bar below. Press on the space bar to proceed and rest your left hand on the keyboard. ",
-  six: "Now find the other bump on your keyboard and press it with your right index finger.",
-  seven: "Great job! You have found the J letter. Now rest your fingers on the keys beside your right index finger with your right thumb also on the space bar together with your left thumb. Press on the right arrow to continue."
+  five: "Great Job! You have found the 'F' letter on your keyboard! Now rest your middle finger on the key beside the F key, and press on it. ",
+  six: "Awesome! That is the 'D' letter. Now rest your fourth finger beside your middle finger, and press on it. ",
+  seven: "Great! You have found the 'S' key. Now place your pinky finger on the key beside your fourth finger and press on it. ",
+  eight: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
+  nine: "Perfect! Your left hand is now in the correct position for touch typing! Chapter 2 will teach you the correct position for your right hand. Press on the right arrow key to go to the next Chapter.",
+  ten: "Or press on the shift key above your right arrow key to go back to the contents page. "
 }
