@@ -291,7 +291,7 @@ var shiftKeyCodes = {
 
 var chaptOne = {
   title: "Chapter 1",
-  one: "We will teach you how to place your hands on the keyboard. ",
+  one: "We will teach you how to place your left hand on the keyboard. ",
   two: "Feel around your keyboard, and see if you can find 2 keys with protruding bumps on them. ",
   three: "Now try searching for the keyboard bumps. ",
   four: "When you have found your keyboard bumps, put your left index finger on the key with the bump on the left and press on it. ",
@@ -301,4 +301,16 @@ var chaptOne = {
   eight: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
   nine: "Perfect! Your left hand is now in the correct position for touch typing! Chapter 2 will teach you the correct position for your right hand. Press on the right arrow key to go to the next Chapter.",
   ten: "Or press on the shift key above your right arrow key to go back to the contents page. "
+}
+
+var chaptTwo = {
+  title: "Chapter 2",
+  f: "Sorry, this is the left bump which is the 'F' key. Try to find the other bump on your keyboard and press on it. ",
+  one: "We will teach you how to place your right hand on the keyboard. Find the other keyboard bump, the bump on the most right, and press on it. ",
+  two: "Nice. You have found the 'J' key on your keyboard. Keep your right index finger on it and place your middle finger on the key beside it. Press on it. ",
+  three: "Great! You have pressed on the 'K' key. Now put your fourth finger on the key beside 'K' and press on it.",
+  four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
+  five: "Awesome! Now that is the semi colon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
+  six: "Perfect! Your right hand is now in the correct position for touch typing! The next will be a revision of Chapters 1 and 2. Press on the right arrow key to go to Chapter 3.",
+  seven: "Or press on the shift key above your right arrow key to go back to the contents page. "
 }
