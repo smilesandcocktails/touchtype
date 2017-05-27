@@ -1,10 +1,13 @@
-var title = document.querySelector('.title')
-var instructions = document.querySelector('.instructions')
-var newLetter = document.querySelector('.newLetter')
-var letter = document.querySelector('.letter')
 
 $(document).ready(function() {
 
+  responsiveVoice.cancel()
+  clickToPause()
+  
+  var title = document.querySelector('.title')
+  var instructions = document.querySelector('.instructions')
+  var newLetter = document.querySelector('.newLetter')
+  var letter = document.querySelector('.letter')
 
   title.textContent = chaptTwo.title
   responsiveVoice.speak(title.textContent, "US English Female")

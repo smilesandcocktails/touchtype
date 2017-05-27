@@ -1,13 +1,14 @@
 var intro = {
   title: "Welcome to the TouchType website",
-  one: "Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.",
+  one: "You will learn how to navigate through your keyboard in this website and we will guide you with audio instructions. You can pause and resume the audio at anytime by clicking your mouse. Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.",
   none: "Sorry your browser does not have voice support features"
 }
 
 var contents = {
   intro: "You are now at the TouchType contents page",
-  one: "Press on the same right arrow key to go to the first chapter",
-  two: "Or you can press on the space bar to go to your audio keyboard. The space bar is the longest key at the middle most bottom of your keyboard."
+  one: "For your audio keyboard, press on the space bar.",
+  two: "Or press on the right arrow key to go to the 1st chapter.",
+  three: "The space bar is the longest key at the middle most bottom of your keyboard."
 }
 
 var keyboardIntro = {
@@ -311,10 +312,18 @@ var chaptTwo = {
   three: "Great! You have pressed on the 'K' key. Now put your fourth finger on the key beside 'K' and press on it.",
   four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
   five: "Awesome! Now that is the semi colon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
-  six: "Perfect! Your right hand is now in the correct position for the right home row keys! The next chapter will teach you how to navigate the line of keys above your home row keys. Press on the right arrow key to go to Chapter 3.",
+  six: "Perfect! Your right hand is now in the correct position for the right homerow keys! The next chapter will teach you how to navigate the line of keys above your homerow keys. Press on the right arrow key to go to Chapter 3.",
   seven: "Or press on the shift key above your right arrow key to go back to the contents page. "
 }
 
 var chaptThree = {
   title: "Chapter 3",
+  one: "Place both hands on the homerow keys before we start this lesson. Remember to position your index fingers on the 'F' and the 'J' keys which have bumps on them. Let's refresh our memories. Let's start with the 'F' key. Press on it.",
+  two: "Great! Now, press on the 'J' key.",
+  three: "Awesome, now press on the 'D' key.",
+  four: "Cool, now press on the 'K' key.",
+  five: "Great, now press on the 'S' key.",
+  six: "Fab, now press on the 'L' key.",
+  seven: "Great, now press on the 'A' key.",
+  eight: "Nice, now press on the semicolon key."
 }

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  responsiveVoice.cancel()
+
   var msg = document.querySelector('.text-display')
 
   if(responsiveVoice.voiceSupport()) {
@@ -18,7 +21,7 @@ $(document).ready(function() {
 
     body.onkeydown = function (e) {
       responsiveVoice.cancel()
-      
+
       if ( !e.metaKey ) {
         e.preventDefault();
       }
