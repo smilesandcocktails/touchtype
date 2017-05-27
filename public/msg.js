@@ -322,9 +322,10 @@ var chaptThree = {
   three: "Awesome, now press on the 'D' key.",
   four: "Cool, now press on the 'K' key.",
   five: "Great, now press on the 'S' key.",
-  six: "Fab, now press on the 'L' key.",
+  six: "Fabulous, now press on the 'L' key.",
   seven: "Wonderful, now press on the 'A' key.",
-  eight: "Nice, now press on the ';' key.",
+  eight: "Nice, now press on the semicolon key.",
   nine: "Fantastic! Now rest both your left and right thumbs on the space bar below. Press on the space bar.",
-  ten: "Excellent! You have mastered placing your fingers at the home row keys at the correct position."
+  ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. When we say homerow keys, remember your hand-to-keyboard position right now! Amazing! You are ready to learn the top row keys.",
+  eleven: "Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
 }

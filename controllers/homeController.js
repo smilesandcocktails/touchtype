@@ -30,11 +30,53 @@ function chaptThree (req, res) {
   res.render('chapt/three')
 }
 
+function chaptFour (req, res) {
+  console.log('HOMECONTROLLER - chaptFour FUNCTION - STARTED')
+  res.render('chapt/four')
+}
+
+function chaptFive (req, res) {
+  console.log('HOMECONTROLLER - chaptFive FUNCTION - STARTED')
+  res.render('chapt/five')
+}
+
+function chaptSix (req, res) {
+  console.log('HOMECONTROLLER - chaptSix FUNCTION - STARTED')
+  res.render('chapt/six')
+}
+
+function chaptSeven (req, res) {
+  console.log('HOMECONTROLLER - chaptSeven FUNCTION - STARTED')
+  res.render('chapt/seven')
+}
+
+function chaptEight (req, res) {
+  console.log('HOMECONTROLLER - chaptEight FUNCTION - STARTED')
+  res.render('chapt/eight')
+}
+
+function chaptNine (req, res) {
+  console.log('HOMECONTROLLER - chaptNine FUNCTION - STARTED')
+  res.render('chapt/nine')
+}
+
+function chaptTen (req, res) {
+  console.log('HOMECONTROLLER - chaptTen FUNCTION - STARTED')
+  res.render('chapt/ten')
+}
+
 module.exports = {
   intro,
   contents,
   keyboard,
   chaptOne,
   chaptTwo,
-  chaptThree
+  chaptThree,
+  chaptFour,
+  chaptFive,
+  chaptSix,
+  chaptSeven,
+  chaptEight,
+  chaptNine,
+  chaptTen
 }

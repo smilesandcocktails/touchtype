@@ -21,4 +21,25 @@ router.route('/2')
 router.route('/3')
 .get(homeController.chaptThree)
 
+router.route('/4')
+.get(homeController.chaptFour)
+
+router.route('/5')
+.get(homeController.chaptFive)
+
+router.route('6')
+.get(homeController.chaptSix)
+
+router.route('/7')
+.get(homeController.chaptSeven)
+
+router.route('/8')
+.get(homeController.chaptEight)
+
+router.route('/9')
+.get(homeController.chaptNine)
+
+router.route('/10')
+.get(homeController.chaptTen)
+
 module.exports = router

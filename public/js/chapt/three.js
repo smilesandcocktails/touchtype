@@ -51,19 +51,19 @@ $(document).ready(function() {
           responsiveVoice.speak("'S' is the key beside your left middle finger.", "US English Female")
           break
         case 5:
-          responsiveVoice.speak("Your right hand fourth finger should be on the 'L' is the key.", "US English Female")
+          responsiveVoice.speak("Your right hand fourth finger should be on the 'L' key.", "US English Female")
           break
         case 6:
           responsiveVoice.speak("The 'A' key should be pressed by your left pinky.", "US English Female")
           break
         case 7:
-          responsiveVoice.speak("The ';' key should be pressed by your right pinky.", "US English Female")
+          responsiveVoice.speak("The semicolon key should be pressed by your right pinky.", "US English Female")
           break
         case 8:
-          responsiveVoice.speak("The space bar is at bottom middle part of your keyboard.", "US English Female")
+          responsiveVoice.speak("The space bar is at the bottom middle part of your keyboard.", "US English Female")
           break
         default:
-          responsiveVoice.speak(chaptThree.seven, "US English Female")
+          responsiveVoice.speak(chaptThree.eleven, "US English Female")
           break
       }
     }
@@ -111,6 +111,7 @@ $(document).ready(function() {
           break
         case 8:
           responsiveVoice.speak(chaptThree.ten, "US English Female")
+          responsiveVoice.speak(chaptThree.eleven, "US English Female")
           newLetter.textContent = "space bar"
           checkIndex ++
           break
