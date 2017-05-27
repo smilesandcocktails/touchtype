@@ -323,6 +323,8 @@ var chaptThree = {
   four: "Cool, now press on the 'K' key.",
   five: "Great, now press on the 'S' key.",
   six: "Fab, now press on the 'L' key.",
-  seven: "Great, now press on the 'A' key.",
-  eight: "Nice, now press on the semicolon key."
+  seven: "Wonderful, now press on the 'A' key.",
+  eight: "Nice, now press on the ';' key.",
+  nine: "Fantastic! Now rest both your left and right thumbs on the space bar below. Press on the space bar.",
+  ten: "Excellent! You have mastered placing your fingers at the home row keys at the correct position."
 }

@@ -54,21 +54,25 @@ $(document).ready(function() {
       switch (checkIndex) {
         case 0:
           responsiveVoice.speak(chaptTwo.two, "US English Female")
+          newLetter.textContent = 'k'
           checkIndex ++
           console.log(checkIndex + " is checkIndex after J")
           break
         case 1:
           responsiveVoice.speak(chaptTwo.three, "US English Female")
+          newLetter.textContent = 'l'
           checkIndex ++
           console.log(checkIndex + " is checkIndex after K")
           break
         case 2:
           responsiveVoice.speak(chaptTwo.four, "US English Female")
+          newLetter.textContent = ';'
           checkIndex ++
           console.log(checkIndex + " is checkIndex after L")
           break
         case 3:
           responsiveVoice.speak(chaptTwo.five, "US English Female")
+          newLetter.textContent = 'space bar'
           checkIndex ++
           console.log(checkIndex + " is checkIndex after ;")
           break
