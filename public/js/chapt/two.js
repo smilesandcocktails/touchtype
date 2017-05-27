@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   responsiveVoice.cancel()
@@ -16,57 +15,92 @@ $(document).ready(function() {
 
   responsiveVoice.speak(chaptTwo.one, "US English Female")
 
+  // e.which for j, k, l, ;, spacebar
+  var chaptTwoSequence = [74, 75, 76, 186, 32]
+
+  var checkIndex = 0
+
   $(document).keydown(function(e) {
     responsiveVoice.cancel()
-    console.log(e.which)
-    // keyCode ==> f
-    if (e.which === 70) {
-      responsiveVoice.speak(chaptTwo.f, "US English Female")
-    }
-    // keyCode ==> j
-    if (e.which === 74) {
-      letter.textContent = e.key
-      newLetter.textContent = "k"
-      responsiveVoice.speak(chaptTwo.two, "US English Female")
-    }
 
-    // keyCode ==> k
-    else if (e.which === 75) {
-      letter.textContent = e.key
-      newLetter.textContent = "l"
-      responsiveVoice.speak(chaptTwo.three, "US English Female")
+    if (e.which !== chaptTwoSequence[checkIndex]) {
+      switch (checkIndex) {
+        case 0:
+          if (e.which === 70) {
+            responsiveVoice.speak("This is the left key bump. Move your finger 3 keys to the right to find the right key bump.", "US English Female")
+          }
+          else {
+            responsiveVoice.speak("Try to find the key with the bump again.", "US English Female")
+          }
+          break
+        case 1:
+          responsiveVoice.speak("Try again. Remember to keep your right index finger on the right key bump and place your middle finger beside that key.", "US English Female")
+          break
+        case 2:
+          responsiveVoice.speak("Press on the key to the right of your middle finger beside 'K'", "US English Female")
+          break
+        case 3:
+          responsiveVoice.speak("Try again. Just place your pinky beside your fourth finger.", "US English Female")
+          break
+        case 4:
+          responsiveVoice.speak("Press on the space bar at the middle bottom of your keyboard to finalize this chapter.", "US English Female")
+          break
+        default:
+          responsiveVoice.speak(chaptTwo.seven, "US English Female")
+          break
+      }
     }
-
-    // keyCode ==> l
-    else if (e.which === 76) {
-      letter.textContent = e.key
-      newLetter.textContent = ";"
-      responsiveVoice.speak(chaptTwo.four, "US English Female")
-    }
-
-    // keyCode ==> ;
-    else if (e.which == 186) {
-      letter.textContent = e.key
-      newLetter.textContent = ";"
-      responsiveVoice.speak(chaptTwo.five, "US English Female")
-    }
-    // keyCode ==> spacebar
-    else if (e.which === 32) {
-
-      responsiveVoice.speak(chaptTwo.six + chaptTwo.seven, "US English Female")
-    }
-    // keyCode ==> right arrow
-    else if (e.which === 39) {
-      url = $('.chaptThreeLink').attr('href')
-      nextUrl(url)
-    }
-
-    // keyCode ==> shift key
-    else if (e.which === 16) {
-      url = $('.contentsPage').attr('href')
-      nextUrl(url)
-
+    else {
+      switch (checkIndex) {
+        case 0:
+          responsiveVoice.speak(chaptTwo.two, "US English Female")
+          checkIndex ++
+          console.log(checkIndex + " is checkIndex after J")
+          break
+        case 1:
+          responsiveVoice.speak(chaptTwo.three, "US English Female")
+          checkIndex ++
+          console.log(checkIndex + " is checkIndex after K")
+          break
+        case 2:
+          responsiveVoice.speak(chaptTwo.four, "US English Female")
+          checkIndex ++
+          console.log(checkIndex + " is checkIndex after L")
+          break
+        case 3:
+          responsiveVoice.speak(chaptTwo.five, "US English Female")
+          checkIndex ++
+          console.log(checkIndex + " is checkIndex after ;")
+          break
+        case 4:
+          responsiveVoice.speak(chaptTwo.six + chaptTwo.seven, "US English Female")
+          console.log(checkIndex + " is checkIndex after SpaceBar")
+          checkIndex ++
+        default:
+          console.log("default")
+          break
+      }
     }
   })
+
+
+    $(document).keydown(function(e) {
+      responsiveVoice.cancel()
+
+      var nextChapt = '.chaptThreeLink'
+      var backToContents = '.contentsPage'
+
+      // keyCode ==> right arrow key
+      if (e.which === 39) {
+        url = $(nextChapt).attr('href')
+        nextUrl(url)
+      }
+
+      // keyCode ==> shift key
+      else if (e.which === 16) {
+        url = $(backToContents).attr('href')
+        nextUrl(url)
+      }
+    })
 
 })

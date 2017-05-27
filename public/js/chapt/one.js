@@ -15,29 +15,38 @@ $(document).ready(function() {
 
   responsiveVoice.speak(chaptOne.one + chaptOne.two + chaptOne.three + chaptOne.four, "US English Female")
 
-// e.which for f, d, s, a, spacebar, rightArrow, shift
-var sequence = [70, 68, 83, 65, 32, 39, 16]
+// e.which for f, d, s, a, spacebar
+var chaptOneSequence = [70, 68, 83, 65, 32]
 
 var checkIndex = 0
+
 $(document).keydown(function(e) {
   responsiveVoice.cancel()
 
-  if (e.which !== sequence[checkIndex]) {
+  if (e.which !== chaptOneSequence[checkIndex]) {
     switch (checkIndex) {
       case 0:
-        responsiveVoice.speak("Please try to find F again", "US English Female")
+        if (e.which === 74) {
+          responsiveVoice.speak("This is the right key bump. Move your finger 3 keys to the left to find the left key bump.", "US English Female")
+        }
+        else {
+          responsiveVoice.speak("Try to find the key with the bump again.", "US English Female")
+        }
         break
       case 1:
-        responsiveVoice.speak("Please try to find D again", "US English Female")
+        responsiveVoice.speak("Try again. Remember to keep your left index finger on the left key bump and place your middle finger beside that key.", "US English Female")
         break
       case 2:
-        responsiveVoice.speak("Please try to find S again", "US English Female")
+        responsiveVoice.speak("Press on the key to the left of your middle finger beside 'D'", "US English Female")
         break
       case 3:
-        responsiveVoice.speak("Please try to find A again", "US English Female")
+        responsiveVoice.speak("Try again. Just place your pinky beside the 'S' key that you had your fourth finger on.", "US English Female")
+        break
+      case 4:
+        responsiveVoice.speak("Press on the space bar at the middle bottom of your keyboard to finalize this chapter.", "US English Female")
         break
       default:
-        responsiveVoice.speak("Please try again", "US English Female")
+        responsiveVoice.speak(chaptOne.ten, "US English Female")
         break
     }
   }
@@ -64,41 +73,36 @@ $(document).keydown(function(e) {
         console.log(checkIndex + " is checkIndex after A")
         break
       case 4:
-        responsiveVoice.speak(chaptOne.nine, "US English Female")
+        responsiveVoice.speak(chaptOne.nine + chaptOne.ten, "US English Female")
         console.log(checkIndex + " is checkIndex after SpaceBar")
         checkIndex ++
       default:
         console.log("default")
-        exit()
         break
 
     }
   }
 })
 
-function exit (checkIndex) {
-  // if (checkIndex === 4) {
-    $(document).keydown(function(e) {
-      responsiveVoice.cancel()
 
-      // keyCode ==> right arrow
-      if (e.which === 39) {
-        url = $('.chaptTwoLink').attr('href')
-        nextUrl(url)
-      }
+  $(document).keydown(function(e) {
+    responsiveVoice.cancel()
 
-      // keyCode ==> shift key
-      else if (e.which === 16) {
-        url = $('.contentsPage').attr('href')
-        nextUrl(url)
+    var nextChapt = '.chaptTwoLink'
+    var backToContents = '.contentsPage'
 
-      }
-    })
-  // }
-}
+    // keyCode ==> right arrow key
+    if (e.which === 39) {
+      url = $(nextChapt).attr('href')
+      nextUrl(url)
+    }
 
-exit()
-
+    // keyCode ==> shift key
+    else if (e.which === 16) {
+      url = $(backToContents).attr('href')
+      nextUrl(url)
+    }
+  })
 
 
 })
