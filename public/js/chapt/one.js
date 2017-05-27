@@ -84,13 +84,13 @@ function exit (checkIndex) {
       // keyCode ==> right arrow
       if (e.which === 39) {
         url = $('.chaptTwoLink').attr('href')
-        window.location.href = "http://localhost:8000" + url
+        nextUrl(url)
       }
 
       // keyCode ==> shift key
       else if (e.which === 16) {
         url = $('.contentsPage').attr('href')
-        window.location.href = "http://localhost:8000" + url
+        nextUrl(url)
 
       }
     })

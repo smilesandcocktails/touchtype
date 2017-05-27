@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   responsiveVoice.cancel()
   clickToPause()
-  
+
   var title = document.querySelector('.title')
   var msg = document.querySelector('.msg')
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
       if(e.which === 39) {
         responsiveVoice.cancel()
         url = $('.contentsPage').attr('href')
-        window.location.href = "http://localhost:8000" + url
+        nextUrl(url)
       }
     })
   } else {

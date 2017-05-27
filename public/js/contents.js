@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   responsiveVoice.cancel()
   clickToPause()
-  
+
   var intro = contents.intro
   var msg = document.querySelector('#contents')
   var msg2 = document.querySelector('#contents2')
@@ -24,12 +24,12 @@ $(document).ready(function() {
     if (e.which === 39 || e.which === 49) {
 
       var url = $('.chaptOneLink').attr('href')
-      window.location.href = "http://localhost:8000" + url
+      nextUrl(url)
     }
     // spacebar ==> audio keyboard
     else if (e.which === 32) {
       var url = $('.keyboardLink').attr('href')
-      window.location.href = "http://localhost:8000" + url
+      nextUrl(url)
     }
   })
 })

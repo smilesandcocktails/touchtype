@@ -42,7 +42,7 @@ $(document).ready(function() {
     $(window).on('click', function() {
       responsiveVoice.cancel()
       url = $('.contentsLink').attr('href')
-      window.location.href = "http://localhost:8000" + url
+      nextUrl(url)
     })
 
 })

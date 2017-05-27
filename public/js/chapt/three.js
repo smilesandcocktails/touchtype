@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   responsiveVoice.cancel()
   clickToPause()
-  
+
   var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
@@ -62,28 +62,15 @@ $(document).ready(function() {
     // keyCode ==> right arrow
     else if (e.which === 39) {
       url = $('.chaptThreeLink').attr('href')
-      window.location.href = "http://localhost:8000" + url
+      nextUrl(url)
     }
 
     // keyCode ==> shift key
     else if (e.which === 16) {
       url = $('.contentsPage').attr('href')
-      window.location.href = "http://localhost:8000" + url
+      nextUrl(url)
 
     }
-  })
-
-  var click = 1
-
-  $(window).on('click', function() {
-    if (click == 1) {
-      responsiveVoice.pause()
-    }
-    else if (click == 2) {
-      responsiveVoice.resume()
-      click = 0
-    }
-    click ++
   })
 
 })
