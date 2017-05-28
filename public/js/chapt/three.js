@@ -15,8 +15,8 @@ $(document).ready(function() {
 
   responsiveVoice.speak(chaptThree.one, "US English Female")
 
-  // e.which for f, j, d, k, s, l, a, ;, spacebar
-  var chaptThreeSequence = [70, 74, 68, 75, 83, 76, 65, 186, 32]
+  // e.which for f, j, d, k, s, l, a, ;, g, h, spacebar
+  var chaptThreeSequence = [70, 74, 68, 75, 83, 76, 65, 186, 32, 71, 72]
 
   var checkIndex = 0
 
@@ -61,6 +61,12 @@ $(document).ready(function() {
           break
         case 8:
           responsiveVoice.speak("The space bar is at the bottom middle part of your keyboard.", "US English Female")
+          break
+        case 9:
+          responsiveVoice.speak("Remember that your left index finger should be on the left key bump. Find the key to the right of that bumped key and press on it.", "US English Female")
+          break
+        case 10:
+          responsiveVoice.speak("Your right index finger should be on the right keyboard bump. Find the key to the left of that and press on it.", "US English Female")
           break
         default:
           responsiveVoice.speak(chaptThree.eleven, "US English Female")
@@ -111,8 +117,17 @@ $(document).ready(function() {
           break
         case 8:
           responsiveVoice.speak(chaptThree.ten, "US English Female")
+          newLetter.textContent = "g"
+          checkIndex ++
+          break
+        case 9:
           responsiveVoice.speak(chaptThree.eleven, "US English Female")
-          newLetter.textContent = "space bar"
+          newLetter.textContent = "h"
+          checkIndex ++
+          break
+        case 10:
+          responsiveVoice.speak(chaptThree.next, "US English Female")
+          newLetter.textContent = "h"
           checkIndex ++
           break
         default:

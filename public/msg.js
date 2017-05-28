@@ -310,8 +310,8 @@ var chaptTwo = {
   two: "Nice. You have found the 'J' key on your keyboard. Keep your right index finger on it and place your middle finger on the key beside it. Press on it. ",
   three: "Great! You have pressed on the 'K' key. Now put your fourth finger on the key beside 'K' and press on it.",
   four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
-  five: "Awesome! Now that is the semi colon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
-  six: "Perfect! Your right hand is now in the correct position for the right homerow keys! The next chapter will teach you how to navigate the line of keys above your homerow keys.",
+  five: "Awesome! Now that is the semicolon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
+  six: "Perfect! Your right hand is now in the correct position for the right homerow keys! The next chapter will refresh your memory on the home row keys.",
   seven: "Press on the right arrow key to go to Chapter 3. Or press on the shift key above your right arrow key to go back to the contents page. "
 }
 
@@ -326,6 +326,12 @@ var chaptThree = {
   seven: "Wonderful, now press on the 'A' key.",
   eight: "Nice, now press on the semicolon key.",
   nine: "Fantastic! Now rest both your left and right thumbs on the space bar below. Press on the space bar.",
-  ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. When we say homerow keys, remember your hand-to-keyboard position right now! Amazing! You are ready to learn the top row keys.",
-  eleven: "Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
+  ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. When we say homerow keys, remember your hand-to-keyboard position right now! Let's be adventurous. Now move your left index or second finger 1 key to the right and press on it. ",
+  eleven: "Outstanding! You have pressed on 'G' on your keyboard. Now shift your right index or second finger 1 key to the left. Pres on it.",
+  next: "Amazing! You are ready to learn the top row keys. Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
+}
+
+var chaptFour = {
+  title: "Chapter 4",
+  one: "Now place your hands on the homerow keys."
 }
