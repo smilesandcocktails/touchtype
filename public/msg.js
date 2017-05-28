@@ -326,12 +326,17 @@ var chaptThree = {
   seven: "Wonderful, now press on the 'A' key.",
   eight: "Nice, now press on the semicolon key.",
   nine: "Fantastic! Now rest both your left and right thumbs on the space bar below. Press on the space bar.",
-  ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. When we say homerow keys, remember your hand-to-keyboard position right now! Let's be adventurous. Now move your left index or second finger 1 key to the right and press on it. ",
+  ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. It’s called the homerow because it should be the place where your fingers feel at home when typing and all the other keys are a short distance away. Let's be adventurous. Now move your left index or second finger 1 key to the right and press on it.",
   eleven: "Outstanding! You have pressed on 'G' on your keyboard. Now shift your right index or second finger 1 key to the left. Pres on it.",
-  next: "Amazing! You are ready to learn the top row keys. Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
+  next: "Amazing! As long as you place your index fingers on the bumps where 'F' and 'J' are, you will never get lost. You are ready to learn the top row keys. Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
 }
 
 var chaptFour = {
   title: "Chapter 4",
-  one: "Now place your hands on the homerow keys."
+  one: "We will learn the top row keys in this chapter. First, place your hands on the homerow keys and press on the space bar to begin.",
+  two: "Great! Let's begin! Did you know that the keyboard you have in front of you is called the QWERTY keyboard because of the 1st 6 keys on the top left letter row of the keyboard. This means that the very 1st letter above your pinky, the 'A' key is the 'Q' key. Go ahead and press it.",
+  three: "Wonderful! You have found the 'Q' of your QWERTY keyboard. Bring your pinky back to your 'A' and Now lift your fourth finger to the key above 'S' and get that 'W' key.",
+  four: "Fantastic! This is the 'W' key of your keyboard. Bring your fourth finger back to 'S'. Now shift your middle finger above your 'D' key and press on it. This will be the 'E' of your QWERTY keyboard.",
+  five: "Excellent Job! You got that 'E' key. Now with your index finger, press the key above which is next to the 'E' key that you just pressed to get the 'R' of QWERTY.",
+  six: "Great job! You have found 'R'! With your index finger still on 'R', shift 1 key to the right and press on it. That is your 'T' key."
 }

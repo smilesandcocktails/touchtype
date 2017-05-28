@@ -69,7 +69,7 @@ $(document).ready(function() {
           responsiveVoice.speak("Your right index finger should be on the right keyboard bump. Find the key to the left of that and press on it.", "US English Female")
           break
         default:
-          responsiveVoice.speak(chaptThree.eleven, "US English Female")
+          responsiveVoice.speak(chaptThree.next, "US English Female")
           break
       }
     }
