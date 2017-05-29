@@ -27,7 +27,7 @@ router.route('/4')
 router.route('/5')
 .get(homeController.chaptFive)
 
-router.route('6')
+router.route('/6')
 .get(homeController.chaptSix)
 
 router.route('/7')

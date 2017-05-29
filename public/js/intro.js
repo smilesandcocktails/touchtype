@@ -9,7 +9,6 @@ $(document).ready(function() {
   if(responsiveVoice.voiceSupport()) {
 
     //set the title of the page & speak it out
-    title.textContent = intro.title
     responsiveVoice.speak(title.textContent, "US English Female")
 
     //display & speak the voice instruction (selected)

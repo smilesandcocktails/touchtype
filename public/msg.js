@@ -353,3 +353,11 @@ var chaptFive = {
   five: "Awesomeness! You have found 'O'. Use your pinky to press on the key above your semicolon. That will be the 'P' key.",
   next: "Outstanding! You have now covered the entire top row of your alphabet keys. In the next chapter, we will revise the homerow and top row keys. Press on the right arrow to proceed."
 }
+
+var chaptSix = {
+  title: "Chapter 6",
+  one: "Now that we have learnt both the homerow and the top row alphabet keys, let's revise these keys! We will tell you which alphabet to press, and you can Press on 'F'.",
+  two: "Great! Now press on 'J'.",
+  three: "Fantastic. Now press on the 'R'."
+
+}
