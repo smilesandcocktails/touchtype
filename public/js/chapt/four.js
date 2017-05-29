@@ -15,8 +15,8 @@ $(document).ready(function() {
 
   responsiveVoice.speak(chaptFour.one, "US English Female")
 
-  // e.which for spacebar, q, w, e, r, t, y, u, i, o, p
-  var chaptFourSequence = [32, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80]
+  // e.which for spacebar, q, w, e, r, t, y
+  var chaptFourSequence = [32, 81, 87, 69, 82, 84, 89]
 
   var checkIndex = 0
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
             responsiveVoice.speak("You have pressed the 'E' key. 'R' is one key to the right of this key. Use your index finger to press on it.", "US English Female")
           }
           else if(e.which === 84) {
-            responsiveVoice.speak("This is the 'T' on your keyboard. Use your index finger to press on 1 key to the left of this key for 'R'.", "US English Female")
+            responsiveVoice.speak("This is the 'T' on your keyboard. Use your index finger to press on 1 key to the left for 'R'.", "US English Female")
           }
           else {
             responsiveVoice.speak("Please try again. 'R' is above your 'F' key.", "US English Female")
@@ -95,21 +95,15 @@ $(document).ready(function() {
           else if(e.which === 72) {
             responsiveVoice.speak("This is the 'H' key. The 'Y' is right above this key.", "US English Female")
           }
+          else if(e.which === 84) {
+            responsiveVoice.speak("This is 'T'. And you should press this with your left index finger. 'Y' is one key to the right of this key. Press it with your right index finger.", "US English Female")
+          }
           else {
-            responsiveVoice.speak("Try to find 'Y again.'", "US English Female")
+            responsiveVoice.speak("Your right hand should be on the homerow keys. Try to find 'Y' again with your right index finger.'", "US English Female")
           }
           break
-        case 7:
-          responsiveVoice.speak("s", "US English Female")
-          break
-        case 8:
-          responsiveVoice.speak("", "US English Female")
-          break
-        case 9:
-          responsiveVoice.speak("s", "US English Female")
-          break
         default:
-          responsiveVoice.speak(chaptFour.eleven, "US English Female")
+          responsiveVoice.speak(chaptFour.next, "US English Female")
           break
       }
     }
@@ -147,19 +141,8 @@ $(document).ready(function() {
           break
         case 6:
           responsiveVoice.speak(chaptFour.eight, "US English Female")
-          newLetter.textContent = ";"
-          checkIndex ++
-          break
-        case 7:
-          responsiveVoice.speak(chaptFour.nine, "US English Female")
-          newLetter.textContent = "space bar"
-          checkIndex ++
-          break
-        case 8:
-          responsiveVoice.speak(chaptFour.ten, "US English Female")
-        case 9:
-          responsiveVoice.speak(chaptFour.eleven, "US English Female")
-          newLetter.textContent = "space bar"
+          responsiveVoice.speak(chaptFour.next, "US English Female")
+          newLetter.textContent = "y"
           checkIndex ++
           break
         default:
@@ -173,7 +156,7 @@ $(document).ready(function() {
     $(document).keydown(function(e) {
       responsiveVoice.cancel()
 
-      var nextChapt = '.chaptFourLink'
+      var nextChapt = '.chaptFiveLink'
       var backToContents = '.contentsPage'
 
       // keyCode ==> right arrow key

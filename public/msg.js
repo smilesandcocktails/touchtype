@@ -333,10 +333,23 @@ var chaptThree = {
 
 var chaptFour = {
   title: "Chapter 4",
-  one: "We will learn the top row keys in this chapter. First, place your hands on the homerow keys and press on the space bar to begin.",
-  two: "Great! Let's begin! Did you know that the keyboard you have in front of you is called the QWERTY keyboard because of the 1st 6 keys on the top left letter row of the keyboard. This means that the very 1st letter above your pinky, the 'A' key is the 'Q' key. Go ahead and press it.",
-  three: "Wonderful! You have found the 'Q' of your QWERTY keyboard. Bring your pinky back to your 'A' and Now lift your fourth finger to the key above 'S' and get that 'W' key.",
+  one: "We will learn the top alphabet keys of your keyboard starting from the left. First, place both hands on the homerow keys and press on the space bar to begin.",
+  two: "Wonderful! Lets start! Did you know that the keyboard you have in front of you is called the QWERTY keyboard because of the 1st 6 keys on the top left alphabet row of the keyboard. This means that the very 1st letter above your pinky is the 'Q' key. Go ahead and press it.",
+  three: "Wonderful! You have found the 'Q' of your QWERTY keyboard. Bring your pinky back to your 'A' and Now lift your fourth finger to the key above to get that 'W' key.",
   four: "Fantastic! This is the 'W' key of your keyboard. Bring your fourth finger back to 'S'. Now shift your middle finger above your 'D' key and press on it. This will be the 'E' of your QWERTY keyboard.",
-  five: "Excellent Job! You got that 'E' key. Now with your index finger, press the key above which is next to the 'E' key that you just pressed to get the 'R' of QWERTY.",
-  six: "Great job! You have found 'R'! With your index finger still on 'R', shift 1 key to the right and press on it. That is your 'T' key."
+  five: "Excellent Job! You got 'E' on your keyboard. Now with your index finger, press the key next to the 'E' key to get the 'R' of your QWERTY keyboard.",
+  six: "Great job! You have found 'R'! Keep your finger on 'R', shift 1 key to the right and press on it.",
+  seven: "Awesome! That is the 'T' key that you just entered! Now, the 'Y' of your QWERTY keyboard is beside 'T'. You will have to press 'Y' with your right index finger because it is too far from your left index finger. Shift your right index finger one key to the left, and shift it again to the top. Press on it.",
+  eight: "Outstanding! You have now completed this chapter learning the top row of your keyboard spelling out QWERTY. In the next chapter, you will learn the remaining right side of your top row keys.",
+  next: "Press on the right arrow key to continue to the next chapter. Or the shift key above to go back to the contents page."
+}
+
+var chaptFive = {
+  title: "Chapter 5",
+  one: "Now that we have learnt the first 6 alphabets above your homerow keys spelling out QWERTY, we will continue to learn the other 4 top row keys above your right hand. Let's place both our hands on the homerow keys and press on the space bar to continue.",
+  two: "Great let's start! With your right hand on the homerow keys, shift your right index finger 1 key up from the bump. You will find the 'U' key there. Press on it.",
+  three: "Wonderful! You can now try the key beside 'U' and use your middle finger to press on 'I'.",
+  four: "Fabulous! You have found 'I'! Now put your middle finger back on 'K'. Shift your right fourth finger up to the 'O' key and press on it.",
+  five: "Awesomeness! You have found 'O'. Use your pinky to press on the key above your semicolon. That will be the 'P' key.",
+  next: "Outstanding! You have now covered the entire top row of your alphabet keys. In the next chapter, we will revise the homerow and top row keys. Press on the right arrow to proceed."
 }
