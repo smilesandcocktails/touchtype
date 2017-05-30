@@ -11,7 +11,7 @@ var contents = {
 var keyboardIntro = {
   intro: "Welcome to your Audio Keyboard.",
   one: "Enter any key on your keyboard for an audio guide.",
-  two: "Or use your mouse to click anywhere on the website screen to go back to your contents page."
+  two: "To exit this page, click your mouse on the website screen to go back to your contents page."
 }
 
 var keyCodes = {
