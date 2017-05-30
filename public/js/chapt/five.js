@@ -14,14 +14,11 @@ $(document).ready(function() {
       })
     }
 
-  var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
 
   newLetter.textContent = "u"
-
-  title.textContent = chaptFive.title
 
   speak(chaptFive.one)
 

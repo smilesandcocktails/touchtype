@@ -13,14 +13,11 @@ $(document).ready(function () {
     })
   }
 
-  var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
 
   newLetter.textContent = 'j'
-
-  title.textContent = chaptTwo.title
 
   // speak(chaptTwo.title)
   speak(chaptTwo.one)
@@ -40,7 +37,7 @@ $(document).ready(function () {
     } else {
 
       if (!disabled) {
-        
+
         if (e.which !== chaptTwoSequence[checkIndex]) {
           responsiveVoice.cancel()
           switch (checkIndex) {
