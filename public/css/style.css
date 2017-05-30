@@ -62,3 +62,7 @@ p {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.keycodeDisplay {
+  font-size: 300%;
+}

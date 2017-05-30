@@ -1,7 +1,17 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
   responsiveVoice.cancel()
   clickToPause()
+
+  var disabled = false
+
+  function speak (msg) {
+    responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+      disabled = true
+    }, onend: function () {
+      disabled = false
+    }
+    })
+  }
 
   var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
@@ -9,95 +19,91 @@ $(document).ready(function() {
   var letter = document.querySelector('.letter')
 
   title.textContent = chaptOne.title
-  responsiveVoice.speak(title.textContent, "US English Female")
 
-  newLetter.textContent = "f"
+  newLetter.textContent = 'f'
 
-  responsiveVoice.speak(chaptOne.one, "US English Female")
+  speak(chaptOne.one)
 
-// e.which for f, d, s, a, spacebar
-var chaptOneSequence = [70, 68, 83, 65, 32]
+  // e.which for f, d, s, a, spacebar
+  var chaptOneSequence = [70, 68, 83, 65, 32]
 
-var checkIndex = 0
+  var checkIndex = 0
 
-$(document).keydown(function(e) {
+  $(document).keydown(function (e) {
+    if (!disabled) {
+      if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+        responsiveVoice.cancel()
 
-  if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
-    responsiveVoice.cancel()
+        var nextChapt = '.chaptTwoLink'
+        afterAction(e, nextChapt)
+      } else {
+        if (e.which !== chaptOneSequence[checkIndex]) {
+          responsiveVoice.cancel()
+          switch (checkIndex) {
+            case 0:
+              if (e.which === 74) {
+                speak(chaptOneMistakes.j)
+              } else {
+                speak(chaptOneMistakes.notF)
+              }
+              break
 
-    var nextChapt = '.chaptTwoLink'
-    afterAction(e, nextChapt)
-  }
-  else {
-    if (e.which !== chaptOneSequence[checkIndex]) {
-      responsiveVoice.cancel()
-      switch (checkIndex) {
-        case 0:
-          if (e.which === 74) {
-            responsiveVoice.speak(chaptOneMistakes.j, "US English Female")
+            case 1:
+              speak(chaptOneMistakes.notD)
+              break
+
+            case 2:
+              speak(chaptOneMistakes.notS)
+              break
+
+            case 3:
+              speak(chaptOneMistakes.notA)
+              break
+
+            case 4:
+              speak(chaptOneMistakes.notSpaceBar)
+              break
+
+            default:
+              speak(chaptOne.next)
+              break
           }
-          else {
-            responsiveVoice.speak(chaptOneMistakes.notF, "US English Female")
+        } else {
+          switch (checkIndex) {
+            case 0:
+              speak(chaptOne.two)
+              newLetter.textContent = 'd'
+              checkIndex++
+              break
+
+            case 1:
+              speak(chaptOne.three)
+              newLetter.textContent = 's'
+              checkIndex++
+              break
+
+            case 2:
+              speak(chaptOne.four)
+              newLetter.textContent = 'a'
+              checkIndex++
+              break
+
+            case 3:
+              speak(chaptOne.five)
+              newLetter.textContent = 'space bar'
+              checkIndex++
+              break
+
+            case 4:
+              speak(chaptOne.six)
+              speak(chaptOne.next)
+              checkIndex++
+              break
+
+            default:
+              speak(chaptOne.next)
+              break
           }
-          break
-
-        case 1:
-          responsiveVoice.speak(chaptOneMistakes.notD, "US English Female")
-          break
-
-        case 2:
-          responsiveVoice.speak(chaptOneMistakes.notS, "US English Female")
-          break
-
-        case 3:
-          responsiveVoice.speak(chaptOneMistakes.notA, "US English Female")
-          break
-
-        case 4:
-          responsiveVoice.speak(chaptOneMistakes.notSpaceBar, "US English Female")
-          break
-
-        default:
-          responsiveVoice.speak(chaptOne.next, "US English Female")
-          break
-      }
-    }
-    else {
-      switch (checkIndex) {
-        case 0:
-          responsiveVoice.speak(chaptOne.two, "US English Female")
-          newLetter.textContent = 'd'
-          checkIndex ++
-          break
-
-        case 1:
-          responsiveVoice.speak(chaptOne.three, "US English Female")
-          newLetter.textContent = 's'
-          checkIndex ++
-          break
-
-        case 2:
-          responsiveVoice.speak(chaptOne.four, "US English Female")
-          newLetter.textContent = 'a'
-          checkIndex ++
-          break
-
-        case 3:
-          responsiveVoice.speak(chaptOne.five, "US English Female")
-          newLetter.textContent = 'space bar'
-          checkIndex ++
-          break
-
-        case 4:
-          responsiveVoice.speak(chaptOne.six, "US English Female")
-          responsiveVoice.speak(chaptOne.next, "US English Female")
-          checkIndex ++
-          break
-
-        default:
-          responsiveVoice.speak(chaptOne.next, "US English Female")
-          break
-
         }
       }
     }

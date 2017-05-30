@@ -1,5 +1,5 @@
 {
-  "name": "vgame",
+  "name": "touchtype",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,10 @@
     "express": "^4.15.2",
     "express-ejs-layouts": "^2.3.0",
     "nodemon": "^1.11.0"
+  },
+  "standard": {
+    "globals": [
+      "$", "responsiveVoice", "clickToPause", "nextUrl"
+    ]
   }
 }
