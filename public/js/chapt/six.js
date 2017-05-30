@@ -1,7 +1,17 @@
 $(document).ready(function() {
-
   responsiveVoice.cancel()
   clickToPause()
+
+  var disabled = false
+
+    function speak(msg) {
+      responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+        disabled = true
+      }, onend: function () {
+        disabled = false
+      }
+      })
+    }
 
   var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
@@ -9,11 +19,10 @@ $(document).ready(function() {
   var letter = document.querySelector('.letter')
 
   title.textContent = chaptSix.title
-  responsiveVoice.speak(title.textContent, "US English Female")
 
   newLetter.textContent = "u"
 
-  responsiveVoice.speak(chaptSix.one, "US English Female")
+  responsiveVoice.speak(chaptSix.one)
 
   // e.which for f, j, r, u, d, k, e, i, s, l, w, o, a, ;, q, p, spacebar
   var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 32]
@@ -21,8 +30,15 @@ $(document).ready(function() {
   var checkIndex = 0
 
   $(document).keydown(function(e) {
-    responsiveVoice.cancel()
 
+    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+      responsiveVoice.cancel()
+
+      var nextChapt = '.chaptSevenLink'
+      afterAction(e, nextChapt)
+    }
+    else {
+      if (!disabled) {
     if (e.which !== chaptSixSequence[checkIndex]) {
       switch (checkIndex) {
         case 0:
@@ -75,28 +91,10 @@ $(document).ready(function() {
         default:
           console.log("default")
           break
+
       }
-    }
-  })
-
-
-    $(document).keydown(function(e) {
-      responsiveVoice.cancel()
-
-      var nextChapt = '.chaptSevenLink'
-      var backToContents = '.contentsPage'
-
-      // keyCode ==> right arrow key
-      if (e.which === 39) {
-        url = $(nextChapt).attr('href')
-        nextUrl(url)
-      }
-
-      // keyCode ==> shift key
-      else if (e.which === 16) {
-        url = $(backToContents).attr('href')
-        nextUrl(url)
-      }
-    })
-
+     }
+   }
+ }
+})
 })

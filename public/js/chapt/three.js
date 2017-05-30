@@ -1,19 +1,31 @@
 $(document).ready(function() {
-
   responsiveVoice.cancel()
   clickToPause()
+
+  var disabled = false
+
+  function speak(msg) {
+    responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+      disabled = true
+    }, onend: function () {
+      disabled = false
+    }
+    })
+  }
 
   var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
 
-  title.textContent = chaptThree.title
-  responsiveVoice.speak(title.textContent, "US English Female")
-
   newLetter.textContent = "f"
 
-  responsiveVoice.speak(chaptThree.one, "US English Female")
+  title.textContent = chaptThree.title
+
+  speak(title.textContent)
+
+
+  speak(chaptThree.one)
 
   // e.which for f, j, d, k, s, l, a, ;, g, h, spacebar, g, h
   var chaptThreeSequence = [70, 74, 68, 75, 83, 76, 65, 186, 32, 71, 72]
@@ -30,120 +42,122 @@ $(document).ready(function() {
     }
     else {
 
+    if (!disabled) {
+
       if (e.which !== chaptThreeSequence[checkIndex]) {
         responsiveVoice.cancel()
         switch (checkIndex) {
           case 0:
             if (e.which === 74) {
-              responsiveVoice.speak(chaptThreeMistakes.j, "US English Female")
+              speak(chaptThreeMistakes.j)
             }
             else {
-              responsiveVoice.speak(chaptThreeMistakes.notF, "US English Female")
+              speak(chaptThreeMistakes.notF)
             }
             break
           case 1:
             if (e.which === 70) {
-              responsiveVoice.speak(chaptThreeMistakes.f, "US English Female")
+              speak(chaptThreeMistakes.f)
             }
             else {
-              responsiveVoice.speak(chaptThreeMistakes.notJ, "US English Female")
+              speak(chaptThreeMistakes.notJ)
             }
             break
           case 2:
-            responsiveVoice.speak(chaptThreeMistakes.notD, "US English Female")
+            speak(chaptThreeMistakes.notD)
             break
           case 3:
-            responsiveVoice.speak(chaptThreeMistakes.notK, "US English Female")
+            speak(chaptThreeMistakes.notK)
             break
           case 4:
-            responsiveVoice.speak(chaptThreeMistakes.notS, "US English Female")
+            speak(chaptThreeMistakes.notS)
             break
           case 5:
-            responsiveVoice.speak(chaptThreeMistakes.notL, "US English Female")
+            speak(chaptThreeMistakes.notL)
             break
           case 6:
-            responsiveVoice.speak(chaptThreeMistakes.notA, "US English Female")
+            speak(chaptThreeMistakes.notA)
             break
           case 7:
-            responsiveVoice.speak(chaptThreeMistakes.notSemiColon, "US English Female")
+            speak(chaptThreeMistakes.notSemiColon)
             break
           case 8:
-            responsiveVoice.speak(chaptThreeMistakes.notSpaceBar, "US English Female")
+            speak(chaptThreeMistakes.notSpaceBar)
             break
           case 9:
-            responsiveVoice.speak(chaptThreeMistakes.notG, "US English Female")
+            speak(chaptThreeMistakes.notG)
             break
           case 10:
-            responsiveVoice.speak(chaptThreeMistakes.notH, "US English Female")
+            speak(chaptThreeMistakes.notH)
             break
           default:
-            responsiveVoice.speak(chaptThree.next, "US English Female")
+            speak(chaptThree.next)
             break
         }
       }
       else {
         switch (checkIndex) {
           case 0:
-            responsiveVoice.speak(chaptThree.two, "US English Female")
+            speak(chaptThree.two)
             newLetter.textContent = "j"
             checkIndex ++
             break
           case 1:
-            responsiveVoice.speak(chaptThree.three, "US English Female")
+            speak(chaptThree.three)
             newLetter.textContent = "d"
             checkIndex ++
             break
           case 2:
-            responsiveVoice.speak(chaptThree.four, "US English Female")
+            speak(chaptThree.four)
             newLetter.textContent = "k"
             checkIndex ++
             break
           case 3:
-            responsiveVoice.speak(chaptThree.five, "US English Female")
+            speak(chaptThree.five)
             newLetter.textContent = "s"
             checkIndex ++
             break
           case 4:
-            responsiveVoice.speak(chaptThree.six, "US English Female")
+            speak(chaptThree.six)
             newLetter.textContent = "l"
             checkIndex ++
             break
           case 5:
-            responsiveVoice.speak(chaptThree.seven, "US English Female")
+            speak(chaptThree.seven)
             newLetter.textContent = "a"
             checkIndex ++
             break
           case 6:
-            responsiveVoice.speak(chaptThree.eight, "US English Female")
+            speak(chaptThree.eight)
             newLetter.textContent = ";"
             checkIndex ++
             break
           case 7:
-            responsiveVoice.speak(chaptThree.nine, "US English Female")
+            speak(chaptThree.nine)
             newLetter.textContent = "space bar"
             checkIndex ++
             break
           case 8:
-            responsiveVoice.speak(chaptThree.ten, "US English Female")
+            speak(chaptThree.ten)
             newLetter.textContent = "g"
             checkIndex ++
             break
           case 9:
-            responsiveVoice.speak(chaptThree.eleven, "US English Female")
+            speak(chaptThree.eleven)
             newLetter.textContent = "h"
             checkIndex ++
             break
           case 10:
-            responsiveVoice.speak(chaptThree.next, "US English Female")
+            speak(chaptThree.next)
             newLetter.textContent = "h"
             checkIndex ++
             break
           default:
-            responsiveVoice.speak(chaptThree.next, "US English Female")
+            speak(chaptThree.next)
             break
+          }
         }
       }
     }
   })
-
 })

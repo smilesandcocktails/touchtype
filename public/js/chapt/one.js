@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   var disabled = false
 
-  function speak (msg) {
+  function speak(msg) {
     responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
       disabled = true
     }, onend: function () {
@@ -18,10 +18,11 @@ $(document).ready(function () {
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
 
-  title.textContent = chaptOne.title
-
   newLetter.textContent = 'f'
 
+  title.textContent = chaptOne.title
+
+  // speak(chaptOne.title)
   speak(chaptOne.one)
 
   // e.which for f, d, s, a, spacebar
@@ -30,13 +31,15 @@ $(document).ready(function () {
   var checkIndex = 0
 
   $(document).keydown(function (e) {
-    if (!disabled) {
       if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
         responsiveVoice.cancel()
 
         var nextChapt = '.chaptTwoLink'
         afterAction(e, nextChapt)
       } else {
+
+      if (!disabled) {
+
         if (e.which !== chaptOneSequence[checkIndex]) {
           responsiveVoice.cancel()
           switch (checkIndex) {

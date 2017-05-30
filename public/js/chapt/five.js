@@ -3,17 +3,27 @@ $(document).ready(function() {
   responsiveVoice.cancel()
   clickToPause()
 
+  var disabled = false
+
+    function speak(msg) {
+      responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+        disabled = true
+      }, onend: function () {
+        disabled = false
+      }
+      })
+    }
+
   var title = document.querySelector('.title')
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
 
-  title.textContent = chaptFive.title
-  responsiveVoice.speak(title.textContent, "US English Female")
-
   newLetter.textContent = "u"
 
-  responsiveVoice.speak(chaptFive.one, "US English Female")
+  title.textContent = chaptFive.title
+
+  speak(chaptFive.one)
 
   // e.which for spacebar, u, i, o, p
   var chaptFiveSequence = [32, 85, 73, 79, 80]
@@ -28,102 +38,104 @@ $(document).ready(function() {
       afterAction(e, nextChapt)
     }
     else {
+    if (!disabled) {
       if (e.which !== chaptFiveSequence[checkIndex]) {
         responsiveVoice.cancel()
         switch (checkIndex) {
           case 0:
-              responsiveVoice.speak(chaptFiveMistakes.notSpaceBar, "US English Female")
+              speak(chaptFiveMistakes.notSpaceBar)
             break
           case 1:
             if (e.which === 89) {
-              responsiveVoice.speak(chaptFiveMistakes.y, "US English Female")
+              speak(chaptFiveMistakes.y)
             }
             else if(e.which === 73) {
-              responsiveVoice.speak(chaptFiveMistakes.i, "US English Female")
+              speak(chaptFiveMistakes.i)
             }
             else if (e.which === 72) {
-              responsiveVoice.speak(chaptFiveMistakes.h, "US English Female")
+              speak(chaptFiveMistakes.h)
             } else {
-              responsiveVoice.speak(chaptFiveMistakes.notU, "US English Female")
+              speak(chaptFiveMistakes.notU)
             }
             break
           case 2:
             if(e.which === 85) {
-              responsiveVoice.speak(chaptFiveMistakes.u, "US English Female")
+              speak(chaptFiveMistakes.u)
             }
             else if(e.which === 75) {
-              responsiveVoice.speak(chaptFiveMistakes.k, "US English Female")
+              speak(chaptFiveMistakes.k)
             }
             else if(e.which === 79) {
-              responsiveVoice.speak(chaptFiveMistakes.o, "US English Female")
+              speak(chaptFiveMistakes.o)
             }
             else {
-              responsiveVoice.speak(chaptFiveMistakes.notI,"US English Female")
+              speak(chaptFiveMistakes.notI,"US English Female")
             }
             break
           case 3:
             if (e.which === 76) {
-              responsiveVoice.speak(chaptFiveMistakes.l, "US English Female")
+              speak(chaptFiveMistakes.l)
             }
             else if(e.which === 73) {
-              responsiveVoice.speak(chaptFiveMistakes.iForO, "US English Female")
+              speak(chaptFiveMistakes.iForO)
             }
             else if(e.which === 80) {
-              responsiveVoice.speak(chaptFiveMistakes.p, "US English Female")
+              speak(chaptFiveMistakes.p)
             }
             else {
-              responsiveVoice.speak(chaptFiveMistakes.notO, "US English Female")
+              speak(chaptFiveMistakes.notO)
             }
             break
           case 4:
             if (e.which === 186) {
-              responsiveVoice.speak(chaptFiveMistakes.semicolon, "US English Female")
+              speak(chaptFiveMistakes.semicolon)
             }
             else if(e.which === 222) {
-              responsiveVoice.speak(chaptFiveMistakes.quote, "US English Female")
+              speak(chaptFiveMistakes.quote)
             }
             else if(e.which === 219) {
-              responsiveVoice.speak(chaptFiveMistakes.squareBracket, "US English Female")
+              speak(chaptFiveMistakes.squareBracket)
             }
             else {
-              responsiveVoice.speak(chaptFiveMistakes.notP, "US English Female")
+              speak(chaptFiveMistakes.notP)
             }
             break
           default:
-            responsiveVoice.speak(chaptFive.next, "US English Female")
+            speak(chaptFive.next)
             break
         }
       }
       else {
         switch (checkIndex) {
           case 0:
-            responsiveVoice.speak(chaptFive.two, "US English Female")
+            speak(chaptFive.two)
             newLetter.textContent = "u"
             checkIndex ++
             break
           case 1:
-            responsiveVoice.speak(chaptFive.three, "US English Female")
+            speak(chaptFive.three)
             newLetter.textContent = "i"
             checkIndex ++
             break
           case 2:
-            responsiveVoice.speak(chaptFive.four, "US English Female")
+            speak(chaptFive.four)
             newLetter.textContent = "o"
             checkIndex ++
             break
           case 3:
-            responsiveVoice.speak(chaptFive.five, "US English Female")
+            speak(chaptFive.five)
             newLetter.textContent = "p"
             checkIndex ++
             break
           case 4:
-            responsiveVoice.speak(chaptFive.next, "US English Female")
+            speak(chaptFive.next)
             newLetter.textContent = "p"
             checkIndex ++
             break
           default:
-            responsiveVoice.speak(chaptFive.next, "US English Female")
+            speak(chaptFive.next)
             break
+         }
         }
       }
     }
