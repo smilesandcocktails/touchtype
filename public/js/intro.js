@@ -22,6 +22,9 @@ $(document).ready(function() {
         url = $('.contentsPage').attr('href')
         nextUrl(url)
       }
+      else if (e.which === 91 || e.which === 93) {
+        pageReload()
+      }
     })
   } else {
     //display msg that it does not support voice features

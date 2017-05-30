@@ -31,5 +31,8 @@ $(document).ready(function() {
       var url = $('.keyboardLink').attr('href')
       nextUrl(url)
     }
+    else if (e.which === 91 || e.which === 93) {
+      pageReload()
+    }
   })
 })

@@ -27,9 +27,11 @@ a {
   color: blue;
 }
 
-h1 {
+.title {
   font-size: 400%;
   margin-top: 2%;
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 2px;
 }
 
 p {

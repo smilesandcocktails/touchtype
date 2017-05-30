@@ -45,4 +45,10 @@ $(document).ready(function() {
       nextUrl(url)
     })
 
+    $(document).keydown(function(e) {
+      responsiveVoice.cancel()
+      if (e.which === 91 || e.which === 93) {
+        pageReload()
+      }
+    })
 })

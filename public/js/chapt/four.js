@@ -21,155 +21,142 @@ $(document).ready(function() {
   var checkIndex = 0
 
   $(document).keydown(function(e) {
-    responsiveVoice.cancel()
 
-    if (e.which !== chaptFourSequence[checkIndex]) {
-      switch (checkIndex) {
-        case 0:
-            responsiveVoice.speak("Press on the space bar which is at your middle bottom of your keyboard to start the lesson.", "US English Female")
-          break
-        case 1:
-          if (e.which === 9) {
-            responsiveVoice.speak("This is your TAB key. This creates space before a paragraph. Shift your pinky 1 key to the right from the TAB key and press it.", "US English Female")
-          }
-          else if(e.which === 65) {
-            responsiveVoice.speak("This is your homerow 'A key. Move your pinky 1 key above to get that 'Q' key.", "US English Female")
-          }
-          else if (e.which === 20) {
-            responsiveVoice.speak("This is your CAPS Locks key. Shift your pinky above the 'A' key to get the 'Q'.", "US English Female")
-          }
-          else if (e.which === 87) {
-            responsiveVoice.speak("This is 'W' which should be pressed by your fourth finger. Use your left pinky to press on 1 key to the left.", "US English Female")
-          } else {
-            responsiveVoice.speak("Try to find the 'Q' key again with your pinky. It is above your 'A'", "US English Female")
-          }
-          break
-        case 2:
-          if(e.which === 81) {
-            responsiveVoice.speak("This is your 'Q' key. You should be pressing this with your pinky finger. 'W' is 1 key to the right of this key. Press it with your fourth finger.", "US English Female")
-          }
-          else if(e.which === 69) {
-            responsiveVoice.speak("This is the 'E' on your keyboard. You should be pressing this with your middle finger. Put your fourth finger 1 key to your left to get the 'W'.", "US English Female")
-          }
-          else {
-            responsiveVoice.speak("Try to find 'W' again with your fourth finger. It is above 'D'.","US English Female")
-          }
-          break
-        case 3:
-          if (e.which === 87) {
-            responsiveVoice.speak("This is 'W'. 'E' is 1 key to the right of this key. Use your middle finger to press on 'E'.", "US English Female")
-          }
-          else if(e.which === 82) {
-            responsiveVoice.speak("This is 'R'. The 'E' key is 1 key to the left. Use your middle finger to press on it.", "US English Female")
-          }
-          else {
-            responsiveVoice.speak("Try again. 'E' is the key above your 'D' key.", "US English Female")
-          }
-          break
-        case 4:
-          if (e.which === 69) {
-            responsiveVoice.speak("You have pressed the 'E' key. 'R' is one key to the right of this key. Use your index finger to press on it.", "US English Female")
-          }
-          else if(e.which === 84) {
-            responsiveVoice.speak("This is the 'T' on your keyboard. Use your index finger to press on 1 key to the left for 'R'.", "US English Female")
-          }
-          else {
-            responsiveVoice.speak("Please try again. 'R' is above your 'F' key.", "US English Female")
-          }
-          break
-        case 5:
-          if (e.which === 82) {
-            responsiveVoice.speak("'T' is one key to the right of this key.", "US English Female")
-          }
-          else if(e.which === 71) {
-            responsiveVoice.speak("This is 'G'. 'T' is just right above this key.", "US English Female")
-          }
-          else {
-            responsiveVoice.speak("Try to find 'T' again.", "US English Female")
-          }
-          break
-        case 6:
-          if (e.which === 85) {
-            responsiveVoice.speak("This is 'U'. Shift one key to the left and press it with your right index finger.", "US English Female")
-          }
-          else if(e.which === 72) {
-            responsiveVoice.speak("This is the 'H' key. The 'Y' is right above this key.", "US English Female")
-          }
-          else if(e.which === 84) {
-            responsiveVoice.speak("This is 'T'. And you should press this with your left index finger. 'Y' is one key to the right of this key. Press it with your right index finger.", "US English Female")
-          }
-          else {
-            responsiveVoice.speak("Your right hand should be on the homerow keys. Try to find 'Y' again with your right index finger.'", "US English Female")
-          }
-          break
-        default:
-          responsiveVoice.speak(chaptFour.next, "US English Female")
-          break
-      }
-    }
-    else {
-      switch (checkIndex) {
-        case 0:
-          responsiveVoice.speak(chaptFour.two, "US English Female")
-          newLetter.textContent = "q"
-          checkIndex ++
-          break
-        case 1:
-          responsiveVoice.speak(chaptFour.three, "US English Female")
-          newLetter.textContent = "w"
-          checkIndex ++
-          break
-        case 2:
-          responsiveVoice.speak(chaptFour.four, "US English Female")
-          newLetter.textContent = "e"
-          checkIndex ++
-          break
-        case 3:
-          responsiveVoice.speak(chaptFour.five, "US English Female")
-          newLetter.textContent = "r"
-          checkIndex ++
-          break
-        case 4:
-          responsiveVoice.speak(chaptFour.six, "US English Female")
-          newLetter.textContent = "t"
-          checkIndex ++
-          break
-        case 5:
-          responsiveVoice.speak(chaptFour.seven, "US English Female")
-          newLetter.textContent = "y"
-          checkIndex ++
-          break
-        case 6:
-          responsiveVoice.speak(chaptFour.eight, "US English Female")
-          responsiveVoice.speak(chaptFour.next, "US English Female")
-          newLetter.textContent = "y"
-          checkIndex ++
-          break
-        default:
-          console.log("default")
-          break
-      }
-    }
-  })
-
-
-    $(document).keydown(function(e) {
+    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
       responsiveVoice.cancel()
 
       var nextChapt = '.chaptFiveLink'
-      var backToContents = '.contentsPage'
-
-      // keyCode ==> right arrow key
-      if (e.which === 39) {
-        url = $(nextChapt).attr('href')
-        nextUrl(url)
+      afterAction(e, nextChapt)
+    }
+    else {
+      if (e.which !== chaptFourSequence[checkIndex]) {
+        responsiveVoice.cancel()
+        switch (checkIndex) {
+          case 0:
+              responsiveVoice.speak(chaptFourMistakes.notSpaceBar, "US English Female")
+            break
+          case 1:
+            if (e.which === 9) {
+              responsiveVoice.speak(chaptFourMistakes.tab, "US English Female")
+            }
+            else if(e.which === 65) {
+              responsiveVoice.speak(chaptFourMistakes.a, "US English Female")
+            }
+            else if (e.which === 20) {
+              responsiveVoice.speak(chaptFourMistakes.capslock, "US English Female")
+            }
+            else if (e.which === 87) {
+              responsiveVoice.speak(chaptFourMistakes.w, "US English Female")
+            } else {
+              responsiveVoice.speak(chaptFourMistakes.notQ, "US English Female")
+            }
+            break
+          case 2:
+            if(e.which === 81) {
+              responsiveVoice.speak(chaptFourMistakes.q, "US English Female")
+            }
+            else if(e.which === 69) {
+              responsiveVoice.speak(chaptFourMistakes.e, "US English Female")
+            }
+            else {
+              responsiveVoice.speak(chaptFourMistakes.notW,"US English Female")
+            }
+            break
+          case 3:
+            if (e.which === 87) {
+              responsiveVoice.speak(chaptFourMistakes.wForE, "US English Female")
+            }
+            else if(e.which === 82) {
+              responsiveVoice.speak(chaptFourMistakes.r, "US English Female")
+            }
+            else {
+              responsiveVoice.speak(chaptFourMistakes.notE, "US English Female")
+            }
+            break
+          case 4:
+            if (e.which === 69) {
+              responsiveVoice.speak(chaptFourMistakes.eForR, "US English Female")
+            }
+            else if(e.which === 84) {
+              responsiveVoice.speak(chaptFourMistakes.t, "US English Female")
+            }
+            else {
+              responsiveVoice.speak(chaptFourMistakes.notR, "US English Female")
+            }
+            break
+          case 5:
+            if (e.which === 82) {
+              responsiveVoice.speak(chaptFourMistakes.rForT, "US English Female")
+            }
+            else if(e.which === 71) {
+              responsiveVoice.speak(chaptFourMistakes.g, "US English Female")
+            }
+            else {
+              responsiveVoice.speak(chaptFourMistakes.notT, "US English Female")
+            }
+            break
+          case 6:
+            if (e.which === 85) {
+              responsiveVoice.speak(chaptFourMistakes.u, "US English Female")
+            }
+            else if(e.which === 72) {
+              responsiveVoice.speak(chaptFourMistakes.h, "US English Female")
+            }
+            else if(e.which === 84) {
+              responsiveVoice.speak(chaptFourMistakes.tForY, "US English Female")
+            }
+            else {
+              responsiveVoice.speak(chaptFourMistakes.notY, "US English Female")
+            }
+            break
+          default:
+            responsiveVoice.speak(chaptFour.next, "US English Female")
+            break
+        }
       }
-
-      // keyCode ==> shift key
-      else if (e.which === 16) {
-        url = $(backToContents).attr('href')
-        nextUrl(url)
+      else {
+        switch (checkIndex) {
+          case 0:
+            responsiveVoice.speak(chaptFour.two, "US English Female")
+            newLetter.textContent = "q"
+            checkIndex ++
+            break
+          case 1:
+            responsiveVoice.speak(chaptFour.three, "US English Female")
+            newLetter.textContent = "w"
+            checkIndex ++
+            break
+          case 2:
+            responsiveVoice.speak(chaptFour.four, "US English Female")
+            newLetter.textContent = "e"
+            checkIndex ++
+            break
+          case 3:
+            responsiveVoice.speak(chaptFour.five, "US English Female")
+            newLetter.textContent = "r"
+            checkIndex ++
+            break
+          case 4:
+            responsiveVoice.speak(chaptFour.six, "US English Female")
+            newLetter.textContent = "t"
+            checkIndex ++
+            break
+          case 5:
+            responsiveVoice.speak(chaptFour.seven, "US English Female")
+            newLetter.textContent = "y"
+            checkIndex ++
+            break
+          case 6:
+            responsiveVoice.speak(chaptFour.eight, "US English Female")
+            responsiveVoice.speak(chaptFour.next, "US English Female")
+            newLetter.textContent = "y"
+            checkIndex ++
+            break
+          default:
+            responsiveVoice.speak(chaptFour.next, "US English Female")
+            break
+        }
       }
-    })
-
+    }
+  })
 })

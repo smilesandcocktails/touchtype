@@ -86,9 +86,7 @@ var keyCodes = {
   88 : "x",
   89 : "y",
   90 : "z",
-  91 : "Windows Key or Left Command",
   92 : "right window key ",
-  93 : "Windows Menu or Right Command",
   96 : "numpad 0 ",
   97 : "numpad 1 ",
   98 : "numpad 2 ",
@@ -292,16 +290,22 @@ var shiftKeyCodes = {
 
 var chaptOne = {
   title: "Chapter 1",
-  one: "We will teach you how to place your left hand on the keyboard. ",
-  two: "Feel around your keyboard, and see if you can find 2 keys with protruding bumps on them. ",
-  three: "Now try searching for the keyboard bumps. ",
-  four: "When you have found your keyboard bumps, put your left index finger on the key with the bump on the left and press on it. ",
-  five: "Great Job! You have found the 'F' letter on your keyboard! Now rest your middle finger on the key beside the F key, and press on it. ",
-  six: "Awesome! That is the 'D' letter. Now rest your fourth finger beside your middle finger, and press on it. ",
-  seven: "Great! You have found the 'S' key. Now place your pinky finger on the key beside your fourth finger and press on it. ",
-  eight: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
-  nine: "Perfect! Your left hand is now in the correct position for the left home row keys for touch typing! Chapter 2 will teach you the correct position for your right hand.",
-  ten: "Press on the right arrow key to go to the next Chapter. Or press on the shift key above your right arrow key to go back to the contents page. "
+  one: "We will teach you how to place your left hand on the keyboard. Feel around your keyboard, and see if you can find 2 keys with protruding bumps on them. When you have found your keyboard bumps, put your left index finger on the key with the bump on the left and press on it.",
+  two: "Great Job! You have found the 'F' letter on your keyboard! Now rest your middle finger on the key beside the F key, and press on it.",
+  three: "Awesome! That is the 'D' letter. Now rest your fourth finger beside your middle finger, and press on it.",
+  four: "Great! You have found the 'S' key. Now place your pinky finger on the key beside your fourth finger and press on it.",
+  five: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
+  six: "Perfect! Your left hand is now in the correct position for the left home row keys for touch typing! Chapter 2 will teach you the correct position for your right hand.",
+  next: "Press on the right arrow key to go to the next Chapter. Or press on the shift key above your right arrow key to go back to the contents page."
+}
+
+var chaptOneMistakes = {
+  j: "This is the right key bump. Move your finger 3 keys to the left to find the left key bump.",
+  notF: "Try to find the key with the bump again.",
+  notD: "Try again. Remember to keep your left index finger on the left key bump and place your middle finger beside that key.",
+  notS: "Press on the key to the left of your middle finger beside 'D'",
+  notA: "Try again. Just place your pinky beside the 'S' key that you had your fourth finger on.",
+  notSpaceBar: "Press on the space bar at the middle bottom of your keyboard to finalize this chapter."
 }
 
 var chaptTwo = {
@@ -312,7 +316,16 @@ var chaptTwo = {
   four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
   five: "Awesome! Now that is the semicolon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ",
   six: "Perfect! Your right hand is now in the correct position for the right homerow keys! The next chapter will refresh your memory on the home row keys.",
-  seven: "Press on the right arrow key to go to Chapter 3. Or press on the shift key above your right arrow key to go back to the contents page. "
+  next: "Press on the right arrow key to go to Chapter 3. Or press on the shift key above your right arrow key to go back to the contents page. "
+}
+
+var chaptTwoMistakes = {
+  f: "This is 'F' at the left key bump. Move your finger 3 keys to the right to find the right key bump.",
+  notJ: "Try to find the key with the bump again.",
+  notK: "Try again. Remember to keep your right index finger on the right key bump and place your middle finger beside that key.",
+  notL: "Press on the key to the right of your middle finger beside 'K'",
+  notSemiColon: "Try again. Just place your pinky beside your fourth finger.",
+  notSpaceBar: "Press on the space bar at the middle bottom of your keyboard to finalize this chapter."
 }
 
 var chaptThree = {
@@ -331,6 +344,22 @@ var chaptThree = {
   next: "Amazing! As long as you place your index fingers on the bumps where 'F' and 'J' are, you will never get lost. You are ready to learn the top row keys. Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
 }
 
+var chaptThreeMistakes = {
+  j: "This is 'J'. Move your finger 3 keys to the left to find 'F'.",
+  notF: "Try to find the left bump again.",
+  f: "This is 'F'. Move your finger 3 keys to the right to find 'J'.",
+  notJ: "Try to find the right bump again.",
+  notD: "'D' is the letter beside your left index finger.",
+  notK: "'K' is the key beside your right index finger.",
+  notS: "'S' is the key beside your left middle finger.",
+  notL: "Your right hand fourth finger should be on the 'L' key.",
+  notA: "The 'A' key should be pressed by your left pinky.",
+  notSemiColon: "The semicolon key should be pressed by your right pinky.",
+  notSpaceBar: "The space bar is at the bottom middle part of your keyboard.",
+  notG: "Remember that your left index finger should be on the left key bump. Find the key to the right of that bumped key and press on it.",
+  notH: "Your right index finger should be on the right keyboard bump. Find the key to the left of that and press on it."
+}
+
 var chaptFour = {
   title: "Chapter 4",
   one: "We will learn the top alphabet keys of your keyboard starting from the left. First, place both hands on the homerow keys and press on the space bar to begin.",
@@ -344,6 +373,31 @@ var chaptFour = {
   next: "Press on the right arrow key to continue to the next chapter. Or the shift key above to go back to the contents page."
 }
 
+var chaptFourMistakes = {
+  notSpaceBar: "Press on the space bar which is at your middle bottom of your keyboard to start the lesson.",
+  tab: "This is your TAB key. This creates space before a paragraph. Shift your pinky 1 key to the right from the TAB key and press it.",
+  a: "This is your homerow 'A key. Move your pinky 1 key above to get that 'Q' key.",
+  capslock: "This is your CAPS Locks key. Shift your pinky above the 'A' key to get the 'Q'.",
+  w: "This is 'W' which should be pressed by your fourth finger. Use your left pinky to press on 1 key to the left.",
+  notQ: "Try to find the 'Q' key again with your pinky. It is above your 'A'",
+  q: "This is your 'Q' key. You should be pressing this with your pinky finger. 'W' is 1 key to the right of this key. Press it with your fourth finger.",
+  e: "This is the 'E' on your keyboard. You should be pressing this with your middle finger. Put your fourth finger 1 key to your left to get the 'W'.",
+  notW: "Try to find 'W' again with your fourth finger. It is above 'D'.",
+  wForE: "This is 'W'. 'E' is 1 key to the right of this key. Use your middle finger to press on 'E'.",
+  r: "This is 'R'. The 'E' key is 1 key to the left. Use your middle finger to press on it.",
+  notE: "Try again. 'E' is the key above your 'D' key.",
+  eForR: "You have pressed the 'E' key. 'R' is one key to the right of this key. Use your index finger to press on it.",
+  t: "This is the 'T' on your keyboard. Use your index finger to press on 1 key to the left for 'R'.",
+  notR: "Please try again. 'R' is above your 'F' key.",
+  rForT: "'T' is one key to the right of this key.",
+  g: "This is 'G'. 'T' is just right above this key.",
+  notT: "Try to find 'T' again.",
+  u: "This is 'U'. Shift one key to the left and press it with your right index finger.",
+  h: "This is the 'H' key. The 'Y' is right above this key.",
+  tForY: "This is 'T'. And you should press this with your left index finger. 'Y' is one key to the right of this key. Press it with your right index finger.",
+  notY: "Your right hand should be on the homerow keys. Try to find 'Y' again with your right index finger.'"
+}
+
 var chaptFive = {
   title: "Chapter 5",
   one: "Now that we have learnt the first 6 alphabets above your homerow keys spelling out QWERTY, we will continue to learn the other 4 top row keys above your right hand. Let's place both our hands on the homerow keys and press on the space bar to continue.",
@@ -352,6 +406,26 @@ var chaptFive = {
   four: "Fabulous! You have found 'I'! Now put your middle finger back on 'K'. Shift your right fourth finger up to the 'O' key and press on it.",
   five: "Awesomeness! You have found 'O'. Use your pinky to press on the key above your semicolon. That will be the 'P' key.",
   next: "Outstanding! You have now covered the entire top row of your alphabet keys. In the next chapter, we will revise the homerow and top row keys. Press on the right arrow to proceed."
+}
+
+var chaptFiveMistakes = {
+  notSpaceBar: "Press on the space bar which is at your middle bottom of your keyboard to start the lesson.",
+  y: "This is the 'Y' key. 'U' is 1 key to the right of this key.",
+  i: "You have pressed on 'I' on your keyboard. This key should be pressed by your middle finger. Press on the key to the left for 'U'.",
+  h: "'H'. Your 'U' key is just above your 'J' key.",
+  notU: "Find 'U' again just above your 'J' key.",
+  u: "You have just pressed 'U' earlier on with your index finger. 'I' is just 1 key to the right of this key.",
+  k: "'K' is on your homerow. Just shift your middle finger one key up to get 'I'.",
+  o: "You have pressed on 'O' which should be pressed by your fourth finger. Try 1 key to the left and use your middle finger to press on it.",
+  notI: "Try again to find 'I' on your keyboard. It is just above 'K'.",
+  l: "This is 'L'. Shift your fourth finger one key up to get 'O'.",
+  iForO: "You just entered 'I' on your keyboard. 'O' is just 1 key to the right of this key.",
+  p: "You just pressed on 'P' which should be pressed by your right pinky. 'O' is just 1 key to the left of this key.",
+  notO: "'O' is above your homerow 'L' key. Try again.",
+  semicolon: "This is semicolon. Move your pinky finger one key above this and press on it for 'P'.",
+  quote: "This is your single quote. Try the key above your semicolon.",
+  squareBracket: "You have pressed the opening square bracket. Press on 1 key to the left of this key.",
+  notP: "Shift your pinky 1 key up from the homerow to find 'P'."
 }
 
 var chaptSix = {
