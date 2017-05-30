@@ -1,20 +1,17 @@
 var intro = {
   title: "Welcome to the TouchType website",
-  one: "You will learn how to navigate through your keyboard in this website and we will guide you with audio instructions. You can pause and resume the audio at anytime by clicking your mouse. Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.",
+  one: "You will learn how to navigate through your keyboard in this website and we will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.",
   none: "Sorry your browser does not have voice support features"
 }
 
 var contents = {
-  intro: "You are now at the TouchType contents page",
-  one: "For your audio keyboard, press on the space bar.",
-  two: "Or press on the right arrow key to go to the 1st chapter.",
-  three: "The space bar is the longest key at the middle most bottom of your keyboard."
+  intro: "TouchType contents page. For your audio keyboard, press on the space bar. The space bar is the longest key at the middle most bottom of your keyboard. If you would like to refresh the chapter at any point in time, you can press either the key on the left of the space bar, or the key on the right of the space bar to refresh the page.  To pause or resume the audio, you can click on your mouse within this website screen. To go to each chapter, press on the right arrow key at the bottom right corner of your keyboard.",
 }
 
 var keyboardIntro = {
   intro: "Welcome to your Audio Keyboard.",
   one: "Enter any key on your keyboard for an audio guide.",
-  two: "Or use your mouse to click anywhere on the site to go back to your contents page."
+  two: "Or use your mouse to click anywhere on the website screen to go back to your contents page."
 }
 
 var keyCodes = {
