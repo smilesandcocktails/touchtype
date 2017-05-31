@@ -1,4 +1,6 @@
 function pageReload() {
-  responsiveVoice.cancel()
+  if (responsiveVoice.isPlaying()) {
+    responsiveVoice.cancel()
+  }
   window.location.reload()
 }

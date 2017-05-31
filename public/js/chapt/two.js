@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  responsiveVoice.cancel()
+
+  if (responsiveVoice.isPlaying()) {
+    responsiveVoice.cancel()
+  }
+
   clickToPause()
 
   var disabled = false

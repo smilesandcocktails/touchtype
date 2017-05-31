@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  responsiveVoice.cancel()
+
+  if (responsiveVoice.isPlaying()) {
+    responsiveVoice.cancel()
+  }
+
   clickToPause()
 
   var disabled = false
@@ -30,12 +34,13 @@ $(document).ready(function () {
   $(document).keydown(function (e) {
 
     e.preventDefault()
-    
+
     if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
       responsiveVoice.cancel()
 
       var nextChapt = '.chaptTwoLink'
       afterAction(e, nextChapt)
+      
     } else {
       if (!disabled) {
         if (e.which !== chaptOneSequence[checkIndex]) {

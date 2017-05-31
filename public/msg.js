@@ -1,11 +1,15 @@
 var intro = {
-  title: 'Welcome to the TouchType website',
-  one: 'You will learn how to navigate through your keyboard in this website and we will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Find the bottom right key of your keyboard and press on it to continue. It is your right arrow key.',
+  one: 'Welcome to the TouchType website. You will learn how to navigate through your keyboard in this website. We will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Use your fingers to feel for the keys at the bottom right of your keyboard. The most bottom right key is your right arrow key. Shift your finger 1 key to the left. This is the down arrow key. Press on the down arrow key to read out your menu.',
+  instructions: "TouchType Menu. Number 1. Go to your Menu with the Down Arrow Key. Number 2. Go to your Contents Page with the Up Arrow Key. The up arrow key is 1 key above your down arrow key. Now let's go ahead and press on your Up Arrow Key to go to the contents page.",
+  notDownArrow: "Sorry this is not your down arrow menu key. Try to find your right arrow key at the most bottom right of your keyboard. Shift your finger 1 key to the left for your bottom arrow key. And Press on it.",
+  notUpArrow: "Sorry, this is not your up arrow key. Find your right arrow key at the most right bottom of your keyboard. Shift your finger 1 key to the left. And then shift your finger again 1 key up. This is your up arrow key. Press on it.",
+  next: "Press on your Up Arrow Key to go to the contents page.",
   none: 'Sorry your browser does not have voice support features'
 }
 
 var contents = {
-  intro: 'Contents Page. For your audio keyboard, press on the space bar. The space bar is the longest key at the middle most bottom of your keyboard. If you would like to refresh the chapter at any point in time, you can press either the key on the left of the space bar, or the key on the right of the space bar to refresh the page.  To pause or resume the audio, you can click on your mouse within this website screen. To go to each chapter, press on the right arrow key at the bottom right corner of your keyboard.'
+  intro: 'Contents Page. For your audio menu, press on your shift key above your right arrow key at the bottom right of your keyboard.',
+  instructions: "1. Press on your Space Bar for the Audio Keyboard. The space bar is the longest key positioned at the middle bottom of your keyboard. 2. Press on the right arrow key to proceed to Chapter 1."
 }
 
 var keyboardIntro = {
@@ -23,16 +27,16 @@ var keyCodes = {
   18: 'alt option',
   19: 'break',
   20: 'caps lock',
-  27: 'escape',
+  27: 'esc',
   32: 'spacebar',
   33: 'page up',
   34: 'page down',
   35: 'end',
   36: 'home ',
   37: 'left arrow ',
-  38: 'up arrow ',
+  38: 'up arrow',
   39: 'right arrow',
-  40: 'down arrow ',
+  40: 'down arrow',
   41: 'select',
   42: 'print',
   43: 'execute',

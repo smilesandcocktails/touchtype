@@ -69,6 +69,12 @@ p {
 }
 
 .keycodeDisplay {
-  font-size: 500%;
+  margin-top: 0;
+  font-size: 1000%;
+  font-family: 'Yantramanav', sans-serif;
   color: red;
+}
+
+.icon {
+  margin-top: 5%;
 }

@@ -11,12 +11,12 @@ function afterAction(e, nextChapt) {
     nextUrl(url)
   }
   // shift key ==> Go to Contents Page
-  else if (e.which === 16) {
+  else if (e.which === 38) {
     url = $(backToContents).attr('href')
     nextUrl(url)
   }
   // left or right command ==> Reload Windows
-  else if (e.which === 91 || e.which === 93) {
+  else if (e.which === 27) {
     pageReload()
   }
 }
