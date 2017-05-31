@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   newLetter.textContent = "u"
 
-  responsiveVoice.speak(chaptSix.one)
+  speak(chaptSix.one)
 
   // e.which for f, j, r, u, d, k, e, i, s, l, w, o, a, ;, q, p, spacebar
   var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 32]
@@ -39,54 +39,54 @@ $(document).ready(function() {
     if (e.which !== chaptSixSequence[checkIndex]) {
       switch (checkIndex) {
         case 0:
-          responsiveVoice.speak("", "US English Female")
+          speak("")
           break
         case 1:
-          responsiveVoice.speak("", "US English Female")
+          speak("")
           break
         case 2:
-          responsiveVoice.speak("", "US English Female")
+          speak("")
           break
         case 3:
-          responsiveVoice.speak("", "US English Female")
+          speak("")
           break
         case 4:
-          responsiveVoice.speak("", "US English Female")
+          speak("")
           break
         default:
-          responsiveVoice.speak(chaptSix.next, "US English Female")
+          speak(chaptSix.next)
           break
       }
     }
     else {
       switch (checkIndex) {
         case 0:
-          responsiveVoice.speak(chaptSix.two, "US English Female")
+          speak(chaptSix.two)
           newLetter.textContent = "u"
           checkIndex ++
           break
         case 1:
-          responsiveVoice.speak(chaptSix.three, "US English Female")
+          speak(chaptSix.three)
           newLetter.textContent = "i"
           checkIndex ++
           break
         case 2:
-          responsiveVoice.speak(chaptSix.four, "US English Female")
+          speak(chaptSix.four)
           newLetter.textContent = "o"
           checkIndex ++
           break
         case 3:
-          responsiveVoice.speak(chaptSix.five, "US English Female")
+          speak(chaptSix.five)
           newLetter.textContent = "p"
           checkIndex ++
           break
         case 4:
-          responsiveVoice.speak(chaptSix.next, "US English Female")
+          speak(chaptSix.next)
           newLetter.textContent = "p"
           checkIndex ++
           break
         default:
-          console.log("default")
+          speak(chaptSix.next)
           break
 
       }

@@ -1,11 +1,11 @@
+/*body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}*/
+
 html {
   background-color: white;
   color: black;
-  border: 10px solid black;
-  height: 100%;
-  max-width: 100%;
-  left: 0;
-  overflow: hidden;
 }
 
 body {
@@ -13,16 +13,19 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0;
-  /*height: 100vh;*/
+  height: 100vh;
   width: 100%;
+
 }
 
-.div {
+.bodyDiv {
   font-size: 150%;
   font-family: 'Questrial', sans-serif;
   letter-spacing: 2px;
-
-  /*font-family: 'Yantramanav', sans-serif;*/
+  height: 100%vh;
+  max-width: 100%;
+  left: 0;
+  overflow: hidden;
 }
 
 a {
@@ -46,7 +49,7 @@ p {
   margin-top: 5%;
   width: 4em;
   height: 4em;
-  border: 0.5em solid red;
+  border: 0.5em solid blue;
   border-radius: 50%;
   margin-left: 1.5em;
 }
@@ -58,8 +61,8 @@ p {
   margin-left: -0.6em;
   width: 1.4em;
   height: 1.4em;
-  border-top: 0.5em solid red;
-  border-right: 0.5em solid red;
+  border-top: 0.5em solid blue;
+  border-right: 0.5em solid blue;
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);

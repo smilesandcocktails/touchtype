@@ -19,9 +19,6 @@ $(document).ready(function() {
 
   newLetter.textContent = "f"
 
-  speak(title.textContent)
-
-
   speak(chaptThree.one)
 
   // e.which for f, j, d, k, s, l, a, ;, g, h, spacebar, g, h

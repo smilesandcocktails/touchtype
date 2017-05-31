@@ -9,9 +9,7 @@ var contents = {
 }
 
 var keyboardIntro = {
-  intro: 'Welcome to your Audio Keyboard.',
-  one: 'Enter any key on your keyboard for an audio guide.',
-  two: 'To exit this page, click your mouse on the website screen to go back to your contents page.'
+  intro: 'Audio Keyboard. Enter any key on your keyboard for an audio guide. To exit this page, press on your right arrow key at the most bottom right of your keyboard. To go back to the contents page, press on the SHIFT key above your right arrow key.'
 }
 
 var keyCodes = {
@@ -286,7 +284,6 @@ var shiftKeyCodes = {
 }
 
 var chaptOne = {
-  title: 'Chapter 1',
   one: 'In Chapter 1, We will teach you how to place your left hand on the keyboard. Feel around your keyboard, and see if you can find 2 keys with protruding bumps on them. When you have found your keyboard bumps, put your left index finger on the key with the bump on the left and press on it.',
   two: "Great Job! You have found the 'F' letter on your keyboard! Now rest your middle finger on the key beside the F key, and press on it.",
   three: "Awesome! That is the 'D' letter. Now rest your fourth finger beside your middle finger, and press on it.",
@@ -306,7 +303,6 @@ var chaptOneMistakes = {
 }
 
 var chaptTwo = {
-  title: 'Chapter 2',
   one: 'In Chapter 2, We will teach you how to place your right hand on the keyboard. Find the other keyboard bump, the bump on the most right, and press on it. ',
   two: "Nice. You have found the 'J' key on your keyboard. Keep your right index finger on it and place your middle finger on the key beside it. Press on it. ",
   three: "Great! You have pressed on the 'K' key. Now put your fourth finger on the key beside 'K' and press on it.",
@@ -326,8 +322,7 @@ var chaptTwoMistakes = {
 }
 
 var chaptThree = {
-  title: 'Chapter 3',
-  one: "Place both hands on the homerow keys before we start this lesson. Remember to position your index fingers on the 'F' and the 'J' keys which have bumps on them. Let's refresh our memories. Let's start with the 'F' key. Press on it.",
+  one: "Chapter 3. Place both hands on the homerow keys before we start this lesson. Remember to position your index fingers on the 'F' and the 'J' keys which have bumps on them. Let's refresh our memories. Let's start with the 'F' key. Press on it.",
   two: "Great! Now, press on the 'J' key.",
   three: "Awesome, now press on the 'D' key.",
   four: "Cool, now press on the 'K' key.",
@@ -358,10 +353,9 @@ var chaptThreeMistakes = {
 }
 
 var chaptFour = {
-  title: 'Chapter 4',
-  one: 'We will learn the top alphabet keys of your keyboard starting from the left. First, place both hands on the homerow keys and press on the space bar to begin.',
+  one: 'Chapter 4. We will learn the top alphabet keys of your keyboard starting from the left. First, place both hands on the homerow keys and press on the space bar to begin.',
   two: "Wonderful! Lets start! Did you know that the keyboard you have in front of you is called the QWERTY keyboard because of the 1st 6 keys on the top left alphabet row of the keyboard. This means that the very 1st letter above your pinky is the 'Q' key. Go ahead and press it.",
-  three: "Wonderful! You have found the 'Q' of your QWERTY keyboard. Bring your pinky back to your 'A' and Now lift your fourth finger to the key above to get that 'W' key.",
+  three: "Wonderful! You have found the 'Q' of your QWERTY keyboard. Bring your pinky back to your 'A' and Now lift your fourth finger to the key above to get 'W'.",
   four: "Fantastic! This is the 'W' key of your keyboard. Bring your fourth finger back to 'S'. Now shift your middle finger above your 'D' key and press on it. This will be the 'E' of your QWERTY keyboard.",
   five: "Excellent Job! You got 'E' on your keyboard. Now with your index finger, press the key next to the 'E' key to get the 'R' of your QWERTY keyboard.",
   six: "Great job! You have found 'R'! Keep your finger on 'R', shift 1 key to the right and press on it.",
@@ -396,8 +390,7 @@ var chaptFourMistakes = {
 }
 
 var chaptFive = {
-  title: 'Chapter 5',
-  one: "Now that we have learnt the first 6 alphabets above your homerow keys spelling out QWERTY, we will continue to learn the other 4 top row keys above your right hand. Let's place both our hands on the homerow keys and press on the space bar to continue.",
+  one: "Chapter 5. Now that we have learnt the first 6 alphabets above your homerow keys spelling out QWERTY, we will continue to learn the other 4 top row keys above your right hand. Let's place both our hands on the homerow keys and press on the space bar to continue.",
   two: "Great let's start! With your right hand on the homerow keys, shift your right index finger 1 key up from the bump. You will find the 'U' key there. Press on it.",
   three: "Wonderful! You can now try the key beside 'U' and use your middle finger to press on 'I'.",
   four: "Fabulous! You have found 'I'! Now put your middle finger back on 'K'. Shift your right fourth finger up to the 'O' key and press on it.",
@@ -426,8 +419,7 @@ var chaptFiveMistakes = {
 }
 
 var chaptSix = {
-  title: 'Chapter 6',
-  one: "Now that we have learnt both the homerow and the top row alphabet keys, let's revise these keys! We will tell you which alphabet to press, and you can Press on 'F'.",
+  one: "Chapter 6. Now that we have learnt both the homerow and the top row alphabet keys, let's revise these keys! We will tell you which alphabet to press, and you can Press on 'F'.",
   two: "Great! Now press on 'J'.",
   three: "Fantastic. Now press on the 'R'."
 
