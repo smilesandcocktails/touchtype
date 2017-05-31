@@ -28,6 +28,9 @@ $(document).ready(function() {
   var checkIndex = 0
 
   $(document).keydown(function(e) {
+
+    e.preventDefault()
+    
     if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
       responsiveVoice.cancel()
 

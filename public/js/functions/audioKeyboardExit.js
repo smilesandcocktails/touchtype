@@ -1,4 +1,4 @@
-function afterAction(e, nextChapt) {
+function audioKeyboardExit(e, nextChapt) {
 
   e.preventDefault()
 
@@ -8,11 +8,6 @@ function afterAction(e, nextChapt) {
   // keyCode ==> Go to Next Chapter
   if (e.which === 39) {
     url = $(nextChapt).attr('href')
-    nextUrl(url)
-  }
-  // shift key ==> Go to Contents Page
-  else if (e.which === 16) {
-    url = $(backToContents).attr('href')
     nextUrl(url)
   }
   // left or right command ==> Reload Windows

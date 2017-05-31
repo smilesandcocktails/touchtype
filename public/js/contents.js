@@ -10,6 +10,9 @@ $(document).ready(function() {
   responsiveVoice.speak(contents.intro, "US English Female")
 
   $(document).keydown(function(e) {
+
+    e.preventDefault()
+    
     responsiveVoice.cancel()
     //right arrow OR 1 ==> chapter 1
     if (e.which === 39 || e.which === 49) {

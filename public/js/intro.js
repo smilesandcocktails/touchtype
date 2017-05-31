@@ -16,6 +16,9 @@ $(document).ready(function() {
     responsiveVoice.speak(msg.textContent, "US English Female")
 
     $(document).keydown(function(e) {
+
+      e.preventDefault()
+      
       //right arrow ==> contents page
       if(e.which === 39) {
         responsiveVoice.cancel()

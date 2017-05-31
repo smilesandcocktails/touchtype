@@ -9,7 +9,7 @@ var contents = {
 }
 
 var keyboardIntro = {
-  intro: 'Audio Keyboard. Enter any key on your keyboard for an audio guide. To exit this page, press on your right arrow key at the most bottom right of your keyboard. To go back to the contents page, press on the SHIFT key above your right arrow key.'
+  intro: 'Audio Keyboard. Enter any key on your keyboard for an audio guide. To exit this page, press on the right arrow key at the most bottom right of your keyboard.'
 }
 
 var keyCodes = {
@@ -20,7 +20,7 @@ var keyCodes = {
   13: 'enter',
   16: 'shift',
   17: 'control',
-  18: 'option',
+  18: 'alt option',
   19: 'break',
   20: 'caps lock',
   27: 'escape',
@@ -177,7 +177,7 @@ var shiftKeyCodes = {
   13: 'enter',
   16: 'shift',
   17: 'control',
-  18: 'alt',
+  18: 'alt option',
   19: 'break',
   20: 'caps lock',
   27: 'escape',

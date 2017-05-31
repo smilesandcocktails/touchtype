@@ -69,5 +69,6 @@ p {
 }
 
 .keycodeDisplay {
-  font-size: 300%;
+  font-size: 500%;
+  color: red;
 }

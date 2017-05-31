@@ -19,11 +19,16 @@ $(document).ready(function () {
   speak(keyboardIntro.intro)
 
   $(document).keydown(function (e) {
-    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
-      responsiveVoice.cancel()
+    e.preventDefault()
+    
+    if (e.which === 39 || e.which === 91 || e.which === 93) {
 
-      var nextChapt = '.chaptOneLink'
-      afterAction(e, nextChapt)
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
+
+      var nextChapt = '.contentsPage'
+      audioKeyboardExit(e, nextChapt)
 
     } else {
       console.log('DISABLED BEFORE !DISABLED'+disabled);
