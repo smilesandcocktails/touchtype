@@ -23,15 +23,17 @@ $(document).ready(function () {
   $(document).keydown(function (e) {
     e.preventDefault()
 
-    if (e.which === 39 || e.which === 91 || e.which === 93) {
+    if (e.which === 38) { // Contents Page => Right Arrow
+
       if (responsiveVoice.isPlaying()) {
         responsiveVoice.cancel()
       }
 
-      var nextChapt = '.contentsPage'
-      audioKeyboardExit(e, nextChapt)
+      var contents = '.contentsPage'
+      audioKeyboardExit(e, contents)
+
     } else {
-      console.log('DISABLED BEFORE !DISABLED' + disabled)
+
       if (!disabled) {
       // Speaks out keys that are shifted from shiftKeyCodes
         if (e.shiftKey) {

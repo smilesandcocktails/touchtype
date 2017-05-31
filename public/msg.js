@@ -1,6 +1,6 @@
 var intro = {
-  one: 'Welcome to the TouchType website. You will learn how to navigate through your keyboard in this website. We will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Use your fingers to feel for the keys at the bottom right of your keyboard. The most bottom right key is your right arrow key. Shift your finger 1 key to the left. This is the down arrow key. Press on the down arrow key to read out your menu.',
-  instructions: "TouchType Menu. Number 1. Go to your Menu with the Down Arrow Key. Number 2. Go to your Contents Page with the Up Arrow Key. The up arrow key is 1 key above your down arrow key. Now let's go ahead and press on your Up Arrow Key to go to the contents page.",
+  one: 'Welcome to the TouchType website. You will learn how to navigate through your keyboard in this website. We will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Use your fingers to feel for the keys at the bottom right of your keyboard. The most bottom right key is your right arrow key. Shift your finger 1 key to the left. This is the down arrow key. Press on the down arrow key to read out your menu help.',
+  instructions: "TouchType Menu. Number 1. Reload each page by pressing on the Escape key. This is the key on the top left corner of your keyboard. Number 2. Go to this audio Menu with the Down Arrow Key. Number 3. Go to your Contents Page with the Up Arrow Key. The up arrow key is 1 key above your down arrow key. Now let's go ahead and press on your Up Arrow Key to go to the contents page.",
   notDownArrow: "Sorry this is not your down arrow menu key. Try to find your right arrow key at the most bottom right of your keyboard. Shift your finger 1 key to the left for your bottom arrow key. And Press on it.",
   notUpArrow: "Sorry, this is not your up arrow key. Find your right arrow key at the most right bottom of your keyboard. Shift your finger 1 key to the left. And then shift your finger again 1 key up. This is your up arrow key. Press on it.",
   next: "Press on your Up Arrow Key to go to the contents page.",
@@ -8,12 +8,12 @@ var intro = {
 }
 
 var contents = {
-  intro: 'Contents Page. For your audio menu, press on your shift key above your right arrow key at the bottom right of your keyboard.',
-  instructions: "1. Press on your Space Bar for the Audio Keyboard. The space bar is the longest key positioned at the middle bottom of your keyboard. 2. Press on the right arrow key to proceed to Chapter 1."
+  intro: 'Welcome to the Contents Page. Press on the down arrow key for your help menu. Press on your left arrow key for the audio keyboard. Press on the right arrow key for Chapter 1.',
+  instructions: "Contents Menu. Number 1. Go to your Audio Keyboard with the left arrow key. The left arrow key is 1 key to the left of the down arrow key. Number 2. Go to Chapter 1 with the right arrow key. The right arrow key is 1 key to the right of the down arrow key."
 }
 
 var keyboardIntro = {
-  intro: 'Audio Keyboard. Enter any key on your keyboard for an audio guide. To exit this page, press on the right arrow key at the most bottom right of your keyboard.'
+  intro: 'Audio Keyboard. Enter any key on your keyboard for an audio guide. To exit this page, press on the "up" arrow key.'
 }
 
 var keyCodes = {
@@ -27,7 +27,7 @@ var keyCodes = {
   18: 'alt option',
   19: 'break',
   20: 'caps lock',
-  27: 'esc',
+  27: 'escape',
   32: 'spacebar',
   33: 'page up',
   34: 'page down',
