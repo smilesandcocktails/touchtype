@@ -21,10 +21,16 @@ $(document).ready(function () {
   }
 
   $('#divContents').click(function () {
+    if (responsiveVoice.isPlaying()) {
+      responsiveVoice.cancel()
+    }
     window.location.href = '/contents'
   })
 
   $('#readMenu').click(function () {
+    if (responsiveVoice.isPlaying()) {
+      responsiveVoice.cancel()
+    }
     speak(intro.instructions)
   })
 
@@ -39,37 +45,46 @@ $(document).ready(function () {
     $(document).keydown(function (e) {
       e.preventDefault()
 
-      if (!disabled) {
+      if (e.which === 38 || e.which === 39 || e.which === 27) {
         if (responsiveVoice.isPlaying()) {
           responsiveVoice.cancel()
         }
 
-        if (e.which !== introSequence[checkIndex]) {
-          switch (checkIndex) {
-            case 0:
-              speak(intro.notDownArrow)
-              break
-            case 1:
-              speak(intro.notUpArrow)
-              break
-            default:
-              speak(intro.next)
-              break
+        var nextChapt = '.contentsPage'
+        afterAction(e, nextChapt)
+      } else {
+        if (!disabled) {
+          if (responsiveVoice.isPlaying()) {
+            responsiveVoice.cancel()
           }
-        } else {
-          switch (checkIndex) {
-            case 0:
-              speak(intro.instructions)
-              checkIndex++
-              break
-            case 1:
-              var url = $('.contentsPage').attr('href')
-              nextUrl(url)
-              checkIndex++
-              break
-            default:
-              speak(intro.next)
-              break
+
+          if (e.which !== introSequence[checkIndex]) {
+            switch (checkIndex) {
+              case 0:
+                speak(intro.notDownArrow)
+                break
+              case 1:
+                speak(intro.notUpArrow)
+                break
+              default:
+                speak(intro.next)
+                break
+            }
+          } else {
+            switch (checkIndex) {
+              case 0:
+                speak(intro.instructions)
+                checkIndex++
+                break
+              case 1:
+                var url = $('.contentsPage').attr('href')
+                nextUrl(url)
+                checkIndex++
+                break
+              default:
+                speak(intro.next)
+                break
+            }
           }
         }
       }
