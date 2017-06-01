@@ -22,7 +22,7 @@ $(document).ready(function () {
     })
   }
 
-  newLetter.textContent = 'u'
+  newLetter.textContent = 'spacebar'
 
   speak(chaptFive.one)
 
