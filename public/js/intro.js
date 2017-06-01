@@ -9,7 +9,6 @@ $(document).ready(function () {
   var disabled = false
   var iconDiv = document.querySelector('.icon')
 
-
   function speak (msg) {
     responsiveVoice.speak(msg, 'US English Female', {
       onstart: function () {
@@ -22,6 +21,13 @@ $(document).ready(function () {
     })
   }
 
+  $('#divContents').click(function() {
+    window.location.href = "/contents"
+  })
+
+  $('#readMenu').click(function() {
+    speak(intro.instructions)
+  })
 
   if (responsiveVoice.voiceSupport()) {
     speak(intro.one)
