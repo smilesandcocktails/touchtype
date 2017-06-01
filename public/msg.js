@@ -473,3 +473,24 @@ var chaptSixMistakes = {
   notT: "Try again. 'T' is above 'G'.",
   notY:"Try again. 'Y' is above 'H'."
 }
+
+var chaptSeven = {
+  one: "Chapter 7. You are now ready to learn the alphabets below your homerow keys. First place both hands on the homerow keys and press on the space bar to begin.",
+  two: "Excellent. Let's begin. with your left index finger on the 'F' key, shift it down to keys below and you will find yourself in between 2 keys. Just move your index finger to the key on the right. This is the 'V' key. 'V' for van. Press on it. ",
+  three: "Fantastic. Now, bring your index finger back to 'F'. With your left middle finger, bring it down to the row below the home keys. You will also find yourself in between 2 keys. Now, shift your middle finger to the key on the right. This is the 'C' key on your keyboard. Press on it.",
+  four: "Great Job! Now bring your middle finger back to your homerow 'D' key. With your fourth finger, do the same. Bring your finger down to the row below, and press on the key to the right. This is 'X' on your keyboard.",
+  five: "Outstanding. Finally with your left pinky, bring it down 1 row and press on the key to the right. This is your 'Z' key.",
+  next: "Great now proceed to Chapter 8 to learn the right hand bottom alphabet keys. Press on the right arrow key. Or press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
+}
+
+var chaptSevenMistakes = {
+  notSpaceBar: 'Press on the space bar which is at your middle bottom of your keyboard to start the lesson.',
+  cForV: "This is your 'C' key. This key should be pressed by your middle finger. Shift 1 key to the right and press on it.",
+  notV: "Try to find 'V' again. Shift your left index finger 1 key down from 'F'. You will find your finger in between 2 keys. Press on the key to the right.",
+  xForC: "This is your 'X' key. This key should be pressed by your fourth finger. Shift 1 key to the right and press on it.",
+  notC: "Try to find 'C' again. Shift your left middle finger 1 key down from 'D'. You will find your finger in between 2 keys. Press on the key to the right.",
+  zForX: "This is your 'Z' key. This key should be pressed by your pinky finger. Shift 1 key to the right and press on it.",
+  notX: "Try to find 'X' again. Shift your left fourth finger 1 key down from 'S'. You will find your finger in between 2 keys. Press on the key to the right.",
+  shiftForZ: "This is your shift key. Bring your pinky 1 key to the right and press on it.",
+  notZ: "Try to find 'Z' again. Shift your left pinky finger 1 key down from 'A'. You will find your finger in between 2 keys. Press on the key to the right."
+}
