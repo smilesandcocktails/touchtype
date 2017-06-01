@@ -1,5 +1,3 @@
-const msg = require('../msg.json')
-
 function intro(req, res) {
   console.log('HOMECONTROLLER - intro FUNCTION - STARTED')
   res.render('intro')
@@ -17,7 +15,7 @@ function keyboard (req, res) {
 
 function chaptOne (req, res) {
   console.log('HOMECONTROLLER - chaptOne FUNCTION - STARTED')
-  
+
   res.render('chapt/one')
 }
 
