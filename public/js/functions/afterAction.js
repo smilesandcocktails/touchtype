@@ -1,5 +1,4 @@
-function afterAction(e, nextChapt) {
-
+function afterAction (e, nextChapt) {
   e.preventDefault()
 
   var backToContents = '.contentsPage'

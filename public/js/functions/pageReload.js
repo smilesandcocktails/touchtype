@@ -1,4 +1,4 @@
-function pageReload() {
+function pageReload () {
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
@@ -12,31 +12,27 @@ $(document).ready(function() {
       onstart: function () {
         disabled = true
         showIcon(iconDiv)
-    }, onend: function () {
+      }, onend: function () {
         disabled = false
         hideIcon(iconDiv)
-    }
+      }
     })
   }
 
   speak(contents.intro)
 
-  $(document).keydown(function(e) {
-
+  $(document).keydown(function (e) {
     e.preventDefault()
 
-    if (e.which === 37) { //audio keyboard => left arrow
+    if (e.which === 37) { // audio keyboard => left arrow
       var url = $('.keyboardLink').attr('href')
       nextUrl(url)
-    }
-    else if (e.which === 40) { //help menu => down arrow
+    } else if (e.which === 40) { // help menu => down arrow
       speak(contents.instructions)
-    }
-    else if (e.which === 39) { //chapter 1 => right arrow
+    } else if (e.which === 39) { // chapter 1 => right arrow
       var url = $('.chaptOneLink').attr('href')
       nextUrl(url)
-    }
-    else if (e.which === 27) { //reload => esc
+    } else if (e.which === 27) { // reload => esc
       pageReload()
     }
   })

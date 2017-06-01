@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
@@ -12,7 +11,7 @@ $(document).ready(function () {
   var letter = document.querySelector('.letter')
   var iconDiv = document.querySelector('.icon')
 
-  function speak(msg) {
+  function speak (msg) {
     responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
       showIcon(iconDiv)
       disabled = true
@@ -22,7 +21,6 @@ $(document).ready(function () {
     }
     })
   }
-
 
   newLetter.textContent = 'j'
 
@@ -35,23 +33,22 @@ $(document).ready(function () {
   var checkIndex = 0
 
   $(document).keydown(function (e) {
-
     e.preventDefault()
 
-    if (responsiveVoice.isPlaying()) {
-      responsiveVoice.cancel()
-    }
-
     if (e.which === 38 || e.which === 39 || e.which === 27) {
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
 
       var nextChapt = '.chaptThreeLink'
       afterAction(e, nextChapt)
     } else {
-
       if (!disabled) {
+        if (responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel()
+        }
 
         if (e.which !== chaptTwoSequence[checkIndex]) {
-
           switch (checkIndex) {
             case 0:
               if (e.which === 70) {

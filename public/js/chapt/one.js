@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
@@ -23,7 +22,6 @@ $(document).ready(function () {
     })
   }
 
-
   newLetter.textContent = 'f'
 
   // speak(chaptOne.title)
@@ -35,27 +33,22 @@ $(document).ready(function () {
   var checkIndex = 0
 
   $(document).keydown(function (e) {
-
     e.preventDefault()
 
     if (e.which === 38 || e.which === 39 || e.which === 27) {
-
       if (responsiveVoice.isPlaying()) {
         responsiveVoice.cancel()
       }
 
       var nextChapt = '.chaptTwoLink'
       afterAction(e, nextChapt)
-
     } else {
       if (!disabled) {
-
         if (responsiveVoice.isPlaying()) {
           responsiveVoice.cancel()
         }
 
         if (e.which !== chaptOneSequence[checkIndex]) {
-
           switch (checkIndex) {
             case 0:
               if (e.which === 74) {

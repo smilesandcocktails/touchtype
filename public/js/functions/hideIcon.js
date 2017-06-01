@@ -1,3 +1,3 @@
-function hideIcon(iconDiv) {
+function hideIcon (iconDiv) {
   $(iconDiv).hide()
 }

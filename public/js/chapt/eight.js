@@ -43,6 +43,9 @@ $(document).ready(function () {
       afterAction(e, nextChapt)
     } else {
       if (!disabled) {
+        if (responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel()
+        }
         if (e.which !== chaptEightSequence[checkIndex]) {
           switch (checkIndex) {
             case 0:

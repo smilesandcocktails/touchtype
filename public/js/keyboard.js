@@ -23,8 +23,8 @@ $(document).ready(function () {
   $(document).keydown(function (e) {
     e.preventDefault()
 
-
-    if (e.which === 38) { // Contents Page => Right Arrow
+    if (e.which === 38) {
+ // Contents Page => Right Arrow
 
       if (responsiveVoice.isPlaying()) {
         responsiveVoice.cancel()
@@ -32,9 +32,7 @@ $(document).ready(function () {
 
       var contents = '.contentsPage'
       audioKeyboardExit(e, contents)
-
     } else {
-
       if (!disabled) {
       // Speaks out keys that are shifted from shiftKeyCodes
         if (e.shiftKey) {

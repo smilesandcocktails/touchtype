@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
@@ -14,18 +13,18 @@ $(document).ready(function () {
       onstart: function () {
         showIcon(iconDiv)
         disabled = true
-    }, onend: function () {
+      }, onend: function () {
         hideIcon(iconDiv)
         disabled = false
-    }
+      }
     })
   }
 
-  $('#divContents').click(function() {
-    window.location.href = "/contents"
+  $('#divContents').click(function () {
+    window.location.href = '/contents'
   })
 
-  $('#readMenu').click(function() {
+  $('#readMenu').click(function () {
     speak(intro.instructions)
   })
 
@@ -38,17 +37,14 @@ $(document).ready(function () {
     var checkIndex = 0
 
     $(document).keydown(function (e) {
-
       e.preventDefault()
 
       if (!disabled) {
-
         if (responsiveVoice.isPlaying()) {
           responsiveVoice.cancel()
         }
 
         if (e.which !== introSequence[checkIndex]) {
-
           switch (checkIndex) {
             case 0:
               speak(intro.notDownArrow)

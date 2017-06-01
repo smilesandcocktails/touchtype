@@ -1,4 +1,4 @@
-function nextUrl(url) {
+function nextUrl (url) {
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
