@@ -449,7 +449,6 @@ var chaptSix = {
   twenty: "Marvelous! Last letter! Press on the 'Y' key.",
   twentyOne: "Remarkable! You have mastered both the homerow and the top row alphabet keys! You are now ready for the bottom row alphabet keys.",
   next: "Press on the right arrow key to go to Chapter 7. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
-
 }
 
 var chaptSixMistakes = {

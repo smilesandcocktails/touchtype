@@ -9,6 +9,7 @@ $(document).ready(function () {
   var title = document.querySelector('.title')
   var msg = document.querySelector('.msg')
   var iconDiv = document.querySelector('.icon')
+  var url = $('.contentsPage').attr('href')
 
   function speak (msg) {
     responsiveVoice.speak(msg, 'US English Female', {
@@ -35,12 +36,6 @@ $(document).ready(function () {
 
       e.preventDefault()
 
-      if (e.which !== introSequence[checkIndex]) {
-        responsiveVoice.cancel()
-      }
-      
-      var url = $('.contentsPage').attr('href')
-
       if (e.which === 27) {
         pageReload()
       }
@@ -61,6 +56,9 @@ $(document).ready(function () {
               break
           }
         } else {
+          if (responsiveVoice.isPlaying()) {
+            responsiveVoice.cancel()
+          }
           switch (checkIndex) {
             case 0:
               speak(intro.instructions)

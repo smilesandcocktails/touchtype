@@ -27,10 +27,6 @@ $(document).ready(function() {
 
     e.preventDefault()
 
-    if (responsiveVoice.isPlaying()) {
-      responsiveVoice.cancel()
-    }
-
     if (e.which === 37) { //audio keyboard => left arrow
       var url = $('.keyboardLink').attr('href')
       nextUrl(url)

@@ -38,16 +38,22 @@ $(document).ready(function () {
 
     e.preventDefault()
 
-    if (responsiveVoice.isPlaying()) {
-      responsiveVoice.cancel()
-    }
-
     if (e.which === 38 || e.which === 39 || e.which === 27) {
+
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
+
       var nextChapt = '.chaptTwoLink'
       afterAction(e, nextChapt)
 
     } else {
       if (!disabled) {
+
+        if (responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel()
+        }
+
         if (e.which !== chaptOneSequence[checkIndex]) {
 
           switch (checkIndex) {

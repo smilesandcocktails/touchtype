@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 
 
-  newLetter.textContent = "u"
+  newLetter.textContent = "f"
 
   speak(chaptSix.one)
 
@@ -38,11 +38,11 @@ $(document).ready(function() {
 
     e.preventDefault()
 
-    if (responsiveVoice.isPlaying()) {
-      responsiveVoice.cancel()
-    }
-
     if (e.which === 38 || e.which === 39 || e.which === 27) {
+
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
 
       var nextChapt = '.chaptSevenLink'
       afterAction(e, nextChapt)
@@ -72,6 +72,11 @@ $(document).ready(function() {
       }
     }
     else {
+
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
+
       switch (checkIndex) {
         case 0:
           speak(chaptSix.two)
