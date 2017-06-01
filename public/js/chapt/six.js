@@ -75,33 +75,108 @@ $(document).ready(function() {
       switch (checkIndex) {
         case 0:
           speak(chaptSix.two)
-          newLetter.textContent = "u"
+          newLetter.textContent = "j"
           checkIndex ++
           break
         case 1:
           speak(chaptSix.three)
-          newLetter.textContent = "i"
+          newLetter.textContent = "r"
           checkIndex ++
           break
         case 2:
           speak(chaptSix.four)
-          newLetter.textContent = "o"
+          newLetter.textContent = "u"
           checkIndex ++
           break
         case 3:
           speak(chaptSix.five)
-          newLetter.textContent = "p"
+          newLetter.textContent = "d"
           checkIndex ++
           break
         case 4:
-          speak(chaptSix.next)
+          speak(chaptSix.six)
+          newLetter.textContent = "k"
+          checkIndex ++
+          break
+        case 5:
+          speak(chaptSix.seven)
+          newLetter.textContent = "e"
+          checkIndex ++
+          break
+        case 6:
+          speak(chaptSix.eight)
+          newLetter.textContent = "i"
+          checkIndex ++
+          break
+        case 7:
+          speak(chaptSix.nine)
+          newLetter.textContent = "s"
+          checkIndex ++
+          break
+        case 8:
+          speak(chaptSix.ten)
+          newLetter.textContent = "l"
+          checkIndex ++
+          break
+        case 9:
+          speak(chaptSix.eleven)
+          newLetter.textContent = "w"
+          checkIndex ++
+          break
+        case 10:
+          speak(chaptSix.twelve)
+          newLetter.textContent = "o"
+          checkIndex ++
+          break
+        case 11:
+          speak(chaptSix.thirteen)
+          newLetter.textContent = "a"
+          checkIndex ++
+          break
+        case 12:
+          speak(chaptSix.fourteen)
+          newLetter.textContent = ";"
+          checkIndex ++
+          break
+        case 13:
+          speak(chaptSix.fifteen)
+          newLetter.textContent = "q"
+          checkIndex ++
+          break
+        case 14:
+          speak(chaptSix.sixteen)
           newLetter.textContent = "p"
+          checkIndex ++
+          break
+        case 15:
+          speak(chaptSix.seventeen)
+          newLetter.textContent = "g"
+          checkIndex ++
+          break
+        case 16:
+          speak(chaptSix.eighteen)
+          newLetter.textContent = "h"
+          checkIndex ++
+          break
+        case 17:
+          speak(chaptSix.nineteen)
+          newLetter.textContent = "t"
+          checkIndex ++
+          break
+        case 18:
+          speak(chaptSix.twenty)
+          newLetter.textContent = "y"
+          checkIndex ++
+          break
+        case 19:
+          speak(chaptSix.twentyOne)
+          speak(chaptSix.next)
+          newLetter.textContent = "y"
           checkIndex ++
           break
         default:
           speak(chaptSix.next)
           break
-
       }
      }
    }
