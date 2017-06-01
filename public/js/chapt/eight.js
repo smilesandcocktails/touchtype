@@ -39,7 +39,7 @@ $(document).ready(function () {
         responsiveVoice.cancel()
       }
 
-      var nextChapt = '.chaptNineLink'
+      var nextChapt = '.contentsPage'
       afterAction(e, nextChapt)
     } else {
       if (!disabled) {

@@ -5,8 +5,6 @@ $(document).ready(function() {
 
   clickToPause()
 
-  var msg = document.querySelector('#contents')
-  var msg2 = document.querySelector('#contents2')
   var iconDiv = document.querySelector('.icon')
 
   function speak (msg) {

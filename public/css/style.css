@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: blue;
+  color: #001A4E;
 }
 
 .title {
@@ -42,24 +42,35 @@ p {
 
 .introP {
   font-size: 70%;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .keycodeDisplay {
-  margin-top: 3%;
-  font-size: 700%;
+  margin-top: 5%;
+  -webkit-text-stroke: 4px;
+  font-size: 800%;
   font-family: 'Yantramanav', sans-serif;
-  color: red;
+  color: #D91E36;
+}
+
+.newLetter {
+  margin-top: 2%;
+  -webkit-text-stroke: 4px;
+  font-size: 1000%;
+  font-family: 'Yantramanav', sans-serif;
+  color: #D91E36;
 }
 
 .icon {
   margin-top: 3%;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
 }
 
 .keys {
   display: flex;
   flex-flow: row wrap;
+  -webkit-text-stroke: 3px;
   height: 300px;
   justify-content: center;
 }
@@ -82,7 +93,7 @@ p {
   min-height: 24px;
   height: 47%;
 /*   padding-left: 30%; */
-  color: red;
+  color: #DF2935;
   font-size: 350%;
   text-align: center;
   text-shadow: 1px 1px 0px #666;
@@ -114,4 +125,76 @@ p {
 }
 .right {
   order: 5;
+}
+
+#contentsAudioKeyboardButton {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  -webkit-text-stroke: 2px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 60px;
+  background: #DF2935;
+  margin-bottom: 3%;
+  margin-top: 8%;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+}
+
+.contentsPage {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  -webkit-text-stroke: 2px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 60px;
+  background: #3E104A;
+  margin-bottom: 3%;
+  margin-top: 8%;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+}
+
+.btnDiv {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.chapt {
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -webkit-text-stroke: 3px;
+  border-radius: 50px;
+  color: white;
+  font-size: 60px;
+  background: #001A4E;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.chapt1 {
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -webkit-text-stroke: 3px #001A4E;
+  border-radius: 50px;
+  color: #001A4E;
+  font-size: 60px;
+  background: white;
+  border-style: solid;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contentsChapters {
+  font-size: 200%;
+  margin-bottom: 5%;
+}
+
+.chapterMenuDiv {
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
