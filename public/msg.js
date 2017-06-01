@@ -1,6 +1,6 @@
 var intro = {
   one: 'Welcome to the TouchType website. You will learn how to navigate through your keyboard in this website. We will guide you with audio instructions. You can pause or resume the audio at anytime by clicking your mouse on the website screen. Use your fingers to feel for the keys at the bottom right of your keyboard. The most bottom right key is your right arrow key. Shift your finger 1 key to the left. This is the down arrow key. Press on the down arrow key to read out your menu help.',
-  instructions: "TouchType Menu. Number 1. Reload each page by pressing on the Escape key. This is the key on the top left corner of your keyboard. Number 2. Go to this audio Menu with the Down Arrow Key. Number 3. Go to your Contents Page with the Up Arrow Key. The up arrow key is 1 key above your down arrow key. Now let's go ahead and press on your Up Arrow Key to go to the contents page.",
+  instructions: "TouchType Menu. Number 1. Refresh your page by pressing on the Escape key. This is the key on the top left corner of your keyboard. Number 2. Go to this audio Menu with the Down Arrow Key. Number 3. Go to your Contents Page with the Up Arrow Key. The up arrow key is 1 key above your down arrow key. Now let's go ahead and press on your Up Arrow Key to go to the contents page.",
   notDownArrow: "Sorry this is not your down arrow menu key. Try to find your right arrow key at the most bottom right of your keyboard. Shift your finger 1 key to the left for your bottom arrow key. And Press on it.",
   notUpArrow: "Sorry, this is not your up arrow key. Find your right arrow key at the most right bottom of your keyboard. Shift your finger 1 key to the left. And then shift your finger again 1 key up. This is your up arrow key. Press on it.",
   next: "Press on your Up Arrow Key to go to the contents page.",
@@ -8,7 +8,7 @@ var intro = {
 }
 
 var contents = {
-  intro: 'Welcome to the Contents Page. Press on the down arrow key for your help menu. Press on your left arrow key for the audio keyboard. Press on the right arrow key for Chapter 1.',
+  intro: 'Welcome to the Contents Page. Press on the down arrow key for your help menu. Press on your left arrow key for the audio keyboard. Press on the right arrow key for Chapter 1. Refresh your page with the escape key at the top left key of your keyboard',
   instructions: "Contents Menu. Number 1. Go to your Audio Keyboard with the left arrow key. The left arrow key is 1 key to the left of the down arrow key. Number 2. Go to Chapter 1 with the right arrow key. The right arrow key is 1 key to the right of the down arrow key."
 }
 
@@ -85,7 +85,9 @@ var keyCodes = {
   88: 'x',
   89: 'y',
   90: 'z',
+  91: 'cmd windows',
   92: 'right window key ',
+  93: 'cmd windows',
   96: 'numpad 0 ',
   97: 'numpad 1 ',
   98: 'numpad 2 ',
@@ -294,13 +296,13 @@ var chaptOne = {
   four: "Great! You have found the 'S' key. Now place your pinky finger on the key beside your fourth finger and press on it.",
   five: "Fantastic! That is the 'A' on your keyboard. Now rest your left thumb on the space bar below and press on it.",
   six: 'Perfect! Your left hand is now in the correct position for the left home row keys for touch typing! Chapter 2 will teach you the correct position for your right hand.',
-  next: 'Press on the right arrow key to go to the next Chapter. Or press on the shift key above your right arrow key to go back to the contents page.'
+  next: 'Press on the right arrow key to go to Chapter 2. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again.'
 }
 
 var chaptOneMistakes = {
   j: 'This is the right key bump. Move your finger 3 keys to the left to find the left key bump.',
   notF: 'Try to find the key with the bump again.',
-  notD: 'Try again. Remember to keep your left index finger on the left key bump and place your middle finger beside that key.',
+  notD: 'Try again. Remember to keep your left index finger on the left key bump and place your middle finger on the key beside.',
   notS: "Press on the key to the left of your middle finger beside 'D'",
   notA: "Try again. Just place your pinky beside the 'S' key that you had your fourth finger on.",
   notSpaceBar: 'Press on the space bar at the middle bottom of your keyboard to finalize this chapter.'
@@ -313,12 +315,12 @@ var chaptTwo = {
   four: "Sweet! That is the 'L' key of the keyboard. Now you can rest your pinky finger beside 'L' and press on the key. ",
   five: 'Awesome! Now that is the semicolon on your keyboard. Finally rest your right thumb on the space bar below and press on it. ',
   six: 'Perfect! Your right hand is now in the correct position for the right homerow keys! The next chapter will refresh your memory on the home row keys.',
-  next: 'Press on the right arrow key to go to Chapter 3. Or press on the shift key above your right arrow key to go back to the contents page. '
+  next: 'Press on the right arrow key to go to Chapter 2. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again.'
 }
 
 var chaptTwoMistakes = {
   f: "This is 'F' at the left key bump. Move your finger 3 keys to the right to find the right key bump.",
-  notJ: 'Try to find the key with the bump again.',
+  notJ: 'Try to find the key with the right bump again.',
   notK: 'Try again. Remember to keep your right index finger on the right key bump and place your middle finger beside that key.',
   notL: "Press on the key to the right of your middle finger beside 'K'",
   notSemiColon: 'Try again. Just place your pinky beside your fourth finger.',
@@ -336,8 +338,9 @@ var chaptThree = {
   eight: 'Nice, now press on the semicolon key.',
   nine: 'Fantastic! Now rest both your left and right thumbs on the space bar below. Press on the space bar.',
   ten: "Excellent! You have mastered placing your fingers at the homerow keys at the correct position. It’s called the homerow because it should be the place where your fingers feel at home when typing and all the other keys are a short distance away. Let's be adventurous. Now move your left index or second finger 1 key to the right and press on it.",
-  eleven: "Outstanding! You have pressed on 'G' on your keyboard. Now shift your right index or second finger 1 key to the left. Pres on it.",
-  next: "Amazing! As long as you place your index fingers on the bumps where 'F' and 'J' are, you will never get lost. You are ready to learn the top row keys. Enter your right arrow key for the next chapter or the shift key to go back to the contents page."
+  eleven: "Outstanding! You have pressed on 'G' on your keyboard. Now shift your right index or second finger 1 key to the left. Press on it.",
+  twelve: "Amazing! As long as you place your index fingers on the bumps where 'F' and 'J' are, you will never get lost. You are ready to learn the top row keys.",
+  next: "Press on the right arrow key to go to Chapter 2. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
 }
 
 var chaptThreeMistakes = {
@@ -365,7 +368,7 @@ var chaptFour = {
   six: "Great job! You have found 'R'! Keep your finger on 'R', shift 1 key to the right and press on it.",
   seven: "Awesome! That is the 'T' key that you just entered! Now, the 'Y' of your QWERTY keyboard is beside 'T'. You will have to press 'Y' with your right index finger because it is too far from your left index finger. Shift your right index finger one key to the left, and shift it again to the top. Press on it.",
   eight: 'Outstanding! You have now completed this chapter learning the top row of your keyboard spelling out QWERTY. In the next chapter, you will learn the remaining right side of your top row keys.',
-  next: 'Press on the right arrow key to continue to the next chapter. Or the shift key above to go back to the contents page.'
+  next: 'Press on the right arrow key to go to Chapter 5. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again.'
 }
 
 var chaptFourMistakes = {
@@ -377,7 +380,7 @@ var chaptFourMistakes = {
   notQ: "Try to find the 'Q' key again with your pinky. It is above your 'A'",
   q: "This is your 'Q' key. You should be pressing this with your pinky finger. 'W' is 1 key to the right of this key. Press it with your fourth finger.",
   e: "This is the 'E' on your keyboard. You should be pressing this with your middle finger. Put your fourth finger 1 key to your left to get the 'W'.",
-  notW: "Try to find 'W' again with your fourth finger. It is above 'D'.",
+  notW: "Try to find 'W' again with your fourth finger. It is above 'S'.",
   wForE: "This is 'W'. 'E' is 1 key to the right of this key. Use your middle finger to press on 'E'.",
   r: "This is 'R'. The 'E' key is 1 key to the left. Use your middle finger to press on it.",
   notE: "Try again. 'E' is the key above your 'D' key.",
@@ -399,7 +402,8 @@ var chaptFive = {
   three: "Wonderful! You can now try the key beside 'U' and use your middle finger to press on 'I'.",
   four: "Fabulous! You have found 'I'! Now put your middle finger back on 'K'. Shift your right fourth finger up to the 'O' key and press on it.",
   five: "Awesomeness! You have found 'O'. Use your pinky to press on the key above your semicolon. That will be the 'P' key.",
-  next: 'Outstanding! You have now covered the entire top row of your alphabet keys. In the next chapter, we will revise the homerow and top row keys. Press on the right arrow to proceed.'
+  six: 'Outstanding! You have now covered the entire top row of your alphabet keys. In the next chapter, we will revise the homerow and top row keys.',
+  next: "Press on the right arrow key to go to Chapter 6. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
 }
 
 var chaptFiveMistakes = {
@@ -423,8 +427,31 @@ var chaptFiveMistakes = {
 }
 
 var chaptSix = {
-  one: "Chapter 6. Now that we have learnt both the homerow and the top row alphabet keys, let's revise these keys! We will tell you which alphabet to press, and you can Press on 'F'.",
+  one: "Chapter 6. Now that we have learnt both the homerow and the top row alphabet keys, let's revise these keys! We will tell you which alphabet to press on. Let's begin! Press on 'F'!",
   two: "Great! Now press on 'J'.",
-  three: "Fantastic. Now press on the 'R'."
+  three: "Fantastic. Now press on the 'R' key.",
+  four: "Excellent. Press on the 'U' key on your keyboard.",
+  five: "Fantastic. Now let's press on 'D'.",
+  six: "Awesome. Let's press on the 'K' key now.",
+  seven: "Fabulous. How about the 'E' key? Press on it.",
+  eight: "Amazing! Now press on the 'I' key.",
+  nine: "You are on the roll! Let's press on the 'S' key now.",
+  ten: "Wonderful! Press on the 'L' key now.",
+  eleven: "Brilliant! The next key to press on is the 'W' key.",
+  twelve: "Incredible! Now let's press on the 'O' key.",
+  thirteen: "Terrific! Let's get the 'A' key now.",
+  fourteen: "Great Job! Now let's press on the semicolon.",
+  fifteen: "Outstanding! Let's get the 'Q' key now!",
+  sixteen: "Brilliant Work! Now press on the 'P' key",
+  seventeen: "Phenomenal! Now let's try the 'G' key.",
+  eighteen: "Excellent! Press on the 'H' key.",
+  nineteen: "Incredible Memory! Let's try the 'T' key now.",
+  twenty: "Marvelous! Last letter! Press on the 'Y' key.",
+  twentyOne: "Remarkable! You have mastered both the homerow and the top row alphabet keys! You are now ready for the bottom row alphabet keys.",
+  next: "Press on the right arrow key to go to Chapter 7. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
+
+}
+
+var chaptSixMistakes = {
 
 }

@@ -3,23 +3,26 @@ $(document).ready(function() {
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
-  
+
   clickToPause()
 
   var disabled = false
+  var instructions = document.querySelector('.instructions')
+  var newLetter = document.querySelector('.newLetter')
+  var letter = document.querySelector('.letter')
+  var iconDiv = document.querySelector('.icon')
 
     function speak(msg) {
       responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+        showIcon(iconDiv)
         disabled = true
       }, onend: function () {
+        hideIcon(iconDiv)
         disabled = false
       }
       })
     }
 
-  var instructions = document.querySelector('.instructions')
-  var newLetter = document.querySelector('.newLetter')
-  var letter = document.querySelector('.letter')
 
   newLetter.textContent = "u"
 
@@ -34,8 +37,11 @@ $(document).ready(function() {
 
     e.preventDefault()
 
-    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+    if (responsiveVoice.isPlaying()) {
       responsiveVoice.cancel()
+    }
+
+    if (e.which === 38 || e.which === 39 || e.which === 27) {
 
       var nextChapt = '.chaptSixLink'
       afterAction(e, nextChapt)
@@ -43,7 +49,6 @@ $(document).ready(function() {
     else {
     if (!disabled) {
       if (e.which !== chaptFiveSequence[checkIndex]) {
-        responsiveVoice.cancel()
         switch (checkIndex) {
           case 0:
               speak(chaptFiveMistakes.notSpaceBar)
@@ -72,7 +77,7 @@ $(document).ready(function() {
               speak(chaptFiveMistakes.o)
             }
             else {
-              speak(chaptFiveMistakes.notI,"US English Female")
+              speak(chaptFiveMistakes.notI)
             }
             break
           case 3:
@@ -131,6 +136,7 @@ $(document).ready(function() {
             checkIndex ++
             break
           case 4:
+            speak(chaptFive.six)
             speak(chaptFive.next)
             newLetter.textContent = "p"
             checkIndex ++

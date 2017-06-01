@@ -7,26 +7,30 @@ $(document).ready(function() {
   clickToPause()
 
   var disabled = false
-
-    function speak(msg) {
-      responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
-        disabled = true
-      }, onend: function () {
-        disabled = false
-      }
-      })
-    }
-
   var instructions = document.querySelector('.instructions')
   var newLetter = document.querySelector('.newLetter')
   var letter = document.querySelector('.letter')
+  var iconDiv = document.querySelector('.icon')
+
+  function speak (msg) {
+    responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+      showIcon(iconDiv)
+      disabled = true
+    }, onend: function () {
+      hideIcon(iconDiv)
+      disabled = false
+    }
+    })
+  }
+
+
 
   newLetter.textContent = "u"
 
   speak(chaptSix.one)
 
-  // e.which for f, j, r, u, d, k, e, i, s, l, w, o, a, ;, q, p, spacebar
-  var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 32]
+  // e.which for f, j, r, u, d, k, e, i, s, l, w, o, a, ;, q, p, g, h, t, y, spacebar
+  var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 71, 72, 84, 89, 32]
 
   var checkIndex = 0
 
@@ -34,8 +38,11 @@ $(document).ready(function() {
 
     e.preventDefault()
 
-    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+    if (responsiveVoice.isPlaying()) {
       responsiveVoice.cancel()
+    }
+
+    if (e.which === 38 || e.which === 39 || e.which === 27) {
 
       var nextChapt = '.chaptSevenLink'
       afterAction(e, nextChapt)

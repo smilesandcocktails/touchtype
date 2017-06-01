@@ -35,6 +35,10 @@ $(document).ready(function () {
 
       e.preventDefault()
 
+      if (e.which !== introSequence[checkIndex]) {
+        responsiveVoice.cancel()
+      }
+      
       var url = $('.contentsPage').attr('href')
 
       if (e.which === 27) {
@@ -45,8 +49,6 @@ $(document).ready(function () {
       }
 
       if (!disabled) {
-        if (e.which !== introSequence[checkIndex]) {
-          responsiveVoice.cancel()
           switch (checkIndex) {
             case 0:
               speak(intro.notDownArrow)
@@ -71,7 +73,7 @@ $(document).ready(function () {
             default:
               speak(intro.next)
               break
-          }
+
         }
       }
     })

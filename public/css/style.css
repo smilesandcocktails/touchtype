@@ -1,8 +1,3 @@
-/*body, html {
-    overflow-x: hidden;
-    overflow-y: auto;
-}*/
-
 html {
   background-color: white;
   color: black;
@@ -44,33 +39,9 @@ p {
   font-size: 110%;
 }
 
-.right {
-  display: inline-block;
-  margin-top: 5%;
-  width: 4em;
-  height: 4em;
-  border: 0.5em solid blue;
-  border-radius: 50%;
-  margin-left: 1.5em;
-}
-
-.right:after {
-  content: '';
-	display: inline-block;
-  margin-top: 1.05em;
-  margin-left: -0.6em;
-  width: 1.4em;
-  height: 1.4em;
-  border-top: 0.5em solid blue;
-  border-right: 0.5em solid blue;
-  -moz-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
 .keycodeDisplay {
-  margin-top: 0;
-  font-size: 800%;
+  margin-top: 3%;
+  font-size: 700%;
   font-family: 'Yantramanav', sans-serif;
   color: red;
 }

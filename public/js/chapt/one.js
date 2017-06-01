@@ -7,19 +7,22 @@ $(document).ready(function () {
   clickToPause()
 
   var disabled = false
+  var instructions = document.querySelector('.instructions')
+  var newLetter = document.querySelector('.newLetter')
+  var letter = document.querySelector('.letter')
+  var iconDiv = document.querySelector('.icon')
 
   function speak (msg) {
     responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+      showIcon(iconDiv)
       disabled = true
     }, onend: function () {
+      hideIcon(iconDiv)
       disabled = false
     }
     })
   }
 
-  var instructions = document.querySelector('.instructions')
-  var newLetter = document.querySelector('.newLetter')
-  var letter = document.querySelector('.letter')
 
   newLetter.textContent = 'f'
 
@@ -35,16 +38,18 @@ $(document).ready(function () {
 
     e.preventDefault()
 
-    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+    if (responsiveVoice.isPlaying()) {
       responsiveVoice.cancel()
+    }
 
+    if (e.which === 38 || e.which === 39 || e.which === 27) {
       var nextChapt = '.chaptTwoLink'
       afterAction(e, nextChapt)
-      
+
     } else {
       if (!disabled) {
         if (e.which !== chaptOneSequence[checkIndex]) {
-          responsiveVoice.cancel()
+
           switch (checkIndex) {
             case 0:
               if (e.which === 74) {

@@ -7,19 +7,22 @@ $(document).ready(function() {
   clickToPause()
 
   var disabled = false
+  var instructions = document.querySelector('.instructions')
+  var newLetter = document.querySelector('.newLetter')
+  var letter = document.querySelector('.letter')
+  var iconDiv = document.querySelector('.icon')
 
     function speak(msg) {
       responsiveVoice.speak(msg, 'US English Female', { onstart: function () {
+        showIcon(iconDiv)
         disabled = true
       }, onend: function () {
+        hideIcon(iconDiv)
         disabled = false
       }
       })
     }
 
-  var instructions = document.querySelector('.instructions')
-  var newLetter = document.querySelector('.newLetter')
-  var letter = document.querySelector('.letter')
 
   newLetter.textContent = "q"
 
@@ -35,8 +38,11 @@ $(document).ready(function() {
 
     e.preventDefault()
 
-    if (e.which === 39 || e.which === 16 || e.which === 91 || e.which === 93) {
+    if (responsiveVoice.isPlaying()) {
       responsiveVoice.cancel()
+    }
+
+    if (e.which === 38 || e.which === 39 || e.which === 27) {
 
       var nextChapt = '.chaptFiveLink'
       afterAction(e, nextChapt)
@@ -44,7 +50,7 @@ $(document).ready(function() {
     else {
       if (!disabled) {
       if (e.which !== chaptFourSequence[checkIndex]) {
-        responsiveVoice.cancel()
+
         switch (checkIndex) {
           case 0:
               speak(chaptFourMistakes.notSpaceBar)
@@ -73,7 +79,7 @@ $(document).ready(function() {
               speak(chaptFourMistakes.e)
             }
             else {
-              speak(chaptFourMistakes.notW,"US English Female")
+              speak(chaptFourMistakes.notW)
             }
             break
           case 3:
