@@ -23,12 +23,12 @@ $(document).ready(function () {
   $(document).keydown(function (e) {
     e.preventDefault()
 
-    if (responsiveVoice.isPlaying()) {
-      responsiveVoice.cancel()
-    }
 
     if (e.which === 38) { // Contents Page => Right Arrow
 
+      if (responsiveVoice.isPlaying()) {
+        responsiveVoice.cancel()
+      }
 
       var contents = '.contentsPage'
       audioKeyboardExit(e, contents)
@@ -40,11 +40,17 @@ $(document).ready(function () {
         if (e.shiftKey) {
           display.textContent = shiftKeyCodes[e.keyCode]
           speak(shiftKeyCodes[e.keyCode])
+          if (responsiveVoice.isPlaying()) {
+            responsiveVoice.cancel()
+          }
         }
       // Speaks out keys that are normal from KeyCodes
         else {
           display.textContent = keyCodes[e.keyCode]
           speak(keyCodes[e.keyCode])
+          if (responsiveVoice.isPlaying()) {
+            responsiveVoice.cancel()
+          }
         }
       }
     }
