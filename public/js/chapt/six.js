@@ -30,7 +30,7 @@ $(document).ready(function() {
   speak(chaptSix.one)
 
   // e.which for f, j, r, u, d, k, e, i, s, l, w, o, a, ;, q, p, g, h, t, y, spacebar
-  var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 71, 72, 84, 89, 32]
+  var chaptSixSequence = [70, 74, 82, 85, 68, 75, 69, 73, 83, 76, 87, 79, 65, 186, 81, 80, 71, 72, 84, 89]
 
   var checkIndex = 0
 
@@ -52,19 +52,64 @@ $(document).ready(function() {
     if (e.which !== chaptSixSequence[checkIndex]) {
       switch (checkIndex) {
         case 0:
-          speak("")
+          speak(chaptSixMistakes.notF)
           break
         case 1:
-          speak("")
+          speak(chaptSixMistakes.notJ)
           break
         case 2:
-          speak("")
+          speak(chaptSixMistakes.notR)
           break
         case 3:
-          speak("")
+          speak(chaptSixMistakes.notU)
           break
         case 4:
-          speak("")
+          speak(chaptSixMistakes.notD)
+          break
+        case 5:
+          speak(chaptSixMistakes.notK)
+          break
+        case 6:
+          speak(chaptSixMistakes.notE)
+          break
+        case 7:
+          speak(chaptSixMistakes.notI)
+          break
+        case 8:
+          speak(chaptSixMistakes.notS)
+          break
+        case 9:
+          speak(chaptSixMistakes.notL)
+          break
+        case 10:
+          speak(chaptSixMistakes.notW)
+          break
+        case 11:
+          speak(chaptSixMistakes.notO)
+          break
+        case 12:
+          speak(chaptSixMistakes.notA)
+          break
+        case 13:
+          speak(chaptSixMistakes.notSemicolon)
+          break
+        case 14:
+          speak(chaptSixMistakes.notQ)
+          break
+        case 15:
+          speak(chaptSixMistakes.notP)
+          break
+        case 16:
+          speak(chaptSixMistakes.notG)
+          break
+        case 17:
+          speak(chaptSixMistakes.notH)
+          break
+        case 18:
+          speak(chaptSixMistakes.notT)
+          break
+        case 19:
+          speak(chaptSixMistakes.notY)
           break
         default:
           speak(chaptSix.next)

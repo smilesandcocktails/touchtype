@@ -433,9 +433,9 @@ var chaptSix = {
   four: "Excellent. Press on the 'U' key on your keyboard.",
   five: "Fantastic. Now let's press on 'D'.",
   six: "Awesome. Let's press on the 'K' key now.",
-  seven: "Fabulous. How about the 'E' key? Press on it.",
+  seven: "Fabulous. How about the 'E' key?",
   eight: "Amazing! Now press on the 'I' key.",
-  nine: "You are on the roll! Let's press on the 'S' key now.",
+  nine: "Great Job! Let's press on the 'S' key now.",
   ten: "Wonderful! Press on the 'L' key now.",
   eleven: "Brilliant! The next key to press on is the 'W' key.",
   twelve: "Incredible! Now let's press on the 'O' key.",
@@ -447,10 +447,29 @@ var chaptSix = {
   eighteen: "Excellent! Press on the 'H' key.",
   nineteen: "Incredible Memory! Let's try the 'T' key now.",
   twenty: "Marvelous! Last letter! Press on the 'Y' key.",
-  twentyOne: "Remarkable! You have mastered both the homerow and the top row alphabet keys! You are now ready for the bottom row alphabet keys.",
-  next: "Press on the right arrow key to go to Chapter 7. Press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
+  twentyOne: "Excellent Work! You have mastered both the homerow and the top row alphabet keys! You are now ready for the bottom row alphabet keys.",
+  next: "Press on the right arrow key to go to Chapter 7. Or press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
 }
 
 var chaptSixMistakes = {
-
+  notF: "Try again. Find your left key bump and press on it.",
+  notJ: "Try again. Find your right key bump and press on it.",
+  notR: "Try again. 'R' is above your 'F key.",
+  notU: "Try again. 'U' is above your 'J' key.",
+  notD: "Try again. 'D' is beside your 'F' key.",
+  notK: "Try again. 'K' is beside your 'J' key.",
+  notE: "Try again. 'E' is above your 'D' key.",
+  notI: "Try again. 'I' is above your 'K' key.",
+  notS: "Try again. 'S' is beside your 'D' key.",
+  notL: "Try again. 'L' is beside your 'K' key.",
+  notW: "Try again. 'W' is above your 'S' key.",
+  notO: "Try again. 'O' is above your 'L' key.",
+  notA: "Try again. 'A' is beside your 'S' key.",
+  notSemicolon: "Try again. The semicolon is beside your 'L' key.",
+  notQ: "Try again. 'Q' is above your 'A' key.",
+  notP: "Try again. 'P' is above your semicolon.",
+  notG: "Try again. 'G' is beside 'F'.",
+  notH: "Try again. 'H' is beside 'J'.",
+  notT: "Try again. 'T' is above 'G'.",
+  notY:"Try again. 'Y' is above 'H'."
 }
