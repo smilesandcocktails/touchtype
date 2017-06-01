@@ -494,3 +494,33 @@ var chaptSevenMistakes = {
   shiftForZ: "This is your shift key. Bring your pinky 1 key to the right and press on it.",
   notZ: "Try to find 'Z' again. Shift your left pinky finger 1 key down from 'A'. You will find your finger in between 2 keys. Press on the key to the right."
 }
+
+var chaptEight = {
+  one: "Chapter 8. Let's learn the alphabets on the row below your right homerow keys. First place both hands on the homerow keys and press on the space bar to begin.",
+  two: "Great let's begin! With your right index finger on the 'J' key, shift it down to keys below and you will find yourself in between 2 keys. Just move your index finger to the key on the left. This is the 'AN' key. Press on it.",
+  three: "Good job! Now keep your index finger on 'AN' and shift 1 key to the right. This is your 'M' key. Press on it.",
+  four: "Fabulous! Bring your index finger back to 'J'. Remember that both 'AN' and 'M' are pressed by your right index finger. Now let's bring your right middle finger down 1 row. You will be placed in between 2 keys. Press the key on your right to get the comma.",
+  five: "Great job! Bring your middle finger back up to the 'K' key. Now shift your fourth finger down 1 row, and you will be positioned between 2 keys. Press on the key to the right. This is the period punctuation.",
+  six: "Fantastic! You are now in the punctuation zone. Bring your fourth finger back to your 'L' key. Bring your pinky finger down 1 row and press on the key to the right. This is your slash key.",
+  seven: "Excellent! Bring your pinky back up to the semicolon and let's try 1 more key. With both hands on your homerow keys, slide both your left and right index fingers down 1 row. Meet both fingers to the center of that row. This 1 key is the 'B' of your keyboard. Press on it.",
+  eight: "Awesomeness! You have learnt all the alphabets on your keyboard!",
+  next: "Press on the right arrow key. Or press on the up arrow key to go back to the contents page. Or press on the escape key on the top left of your keyboard to redo this chapter again."
+}
+
+var chaptEightMistakes = {
+  notSpaceBar: 'Press on the space bar which is at your middle bottom of your keyboard to start the lesson.',
+  mForN: "You have pressed on 'M'. Bring your finger 1 key to the left and press on it for the 'AN' key.",
+  notN: "Try to find 'AN' again. Shift your right index finger 1 key down from 'J'. You will find your finger in between 2 keys. Press on the key to the left.",
+  nForM: "This is your 'AN' key. For 'M', bring your index finger 1 key to the right of this key and press on it.",
+  notM: "Try to find 'M' again. Shift your right index finger 1 key down from 'J'. You will find your finger in between 2 keys. Press on the key to the right.",
+  mForComma: "This is the 'M' key. Press on the key to the right of 'M' to get the comma key.",
+  notComma: "Try again. Shift your right middle finger 1 key down from 'K'. You will find your finger in between 2 keys. Press on the key to the right.",
+  commaForDot: "This is the comma. Press on the key to the right to get the dot or period punctuation.",
+  notDot: "Try again. Shift your right fourth finger 1 key straight down from 'L'. You will find your finger in between 2 keys. Press on the key to the right.",
+  dotForSlash: "This is your dot. Bring your left pinky 1 key to the right to get the slash mark.",
+  notSlash: "Try to find the slash again. Shift your right pinky finger 1 key straight down from the semicolon. You will find your finger in between 2 keys. Press on the key to the right.",
+  vForB: "This is your 'V' key. Shift your finger 1 key to the right for 'B'. Press on it.",
+  nForB: "This is your 'N' key. Shift your finger 1 key to the left for 'B'. Press on it.",
+  notB: "Try again. Let's try another method to find the 'B' key. With both your index fingers on the bumps at the homerow keys, meet your index fingers together in the middle on the same row and shift both your fingers 1 row down. Your fingers will both fall on 'B'. Press on it."
+
+}

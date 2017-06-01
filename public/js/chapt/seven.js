@@ -43,7 +43,7 @@ $(document).ready(function() {
         responsiveVoice.cancel()
       }
 
-      var nextChapt = '.chaptSevenLink'
+      var nextChapt = '.chaptEightLink'
       afterAction(e, nextChapt)
     }
     else {
