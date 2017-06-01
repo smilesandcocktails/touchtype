@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   if (responsiveVoice.isPlaying()) {
     responsiveVoice.cancel()
   }
@@ -6,19 +7,17 @@ $(document).ready(function () {
   clickToPause()
 
   var disabled = false
-  var title = document.querySelector('.title')
-  var msg = document.querySelector('.msg')
   var iconDiv = document.querySelector('.icon')
-  var url = $('.contentsPage').attr('href')
+
 
   function speak (msg) {
     responsiveVoice.speak(msg, 'US English Female', {
       onstart: function () {
-        disabled = true
         showIcon(iconDiv)
+        disabled = true
     }, onend: function () {
-        disabled = false
         hideIcon(iconDiv)
+        disabled = false
     }
     })
   }
@@ -36,14 +35,14 @@ $(document).ready(function () {
 
       e.preventDefault()
 
-      if (e.which === 27) {
-        pageReload()
-      }
-      else if (e.which === 38) {
-        nextUrl(url)
-      }
-
       if (!disabled) {
+
+        if (responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel()
+        }
+
+        if (e.which !== introSequence[checkIndex]) {
+
           switch (checkIndex) {
             case 0:
               speak(intro.notDownArrow)
@@ -56,22 +55,20 @@ $(document).ready(function () {
               break
           }
         } else {
-          if (responsiveVoice.isPlaying()) {
-            responsiveVoice.cancel()
-          }
           switch (checkIndex) {
             case 0:
               speak(intro.instructions)
               checkIndex++
               break
             case 1:
+              var url = $('.contentsPage').attr('href')
               nextUrl(url)
               checkIndex++
               break
             default:
               speak(intro.next)
               break
-
+          }
         }
       }
     })
